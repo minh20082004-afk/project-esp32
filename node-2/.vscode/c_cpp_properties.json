@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/espidf/Espressif/**",
+                "D:/espidf/Espressif/frameworks/esp-idf-v5.5.3/components/log/include/**",
+                "D:/espidf/Espressif/frameworks/esp-idf-v5.5.3/components/**",
+                "C:/esp/v5.5.3/esp-idf/components/log/include/**",
+                "${workspaceFolder}/main"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}

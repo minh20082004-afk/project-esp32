@@ -1,0 +1,318 @@
+Command: D:\espidf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\espidf\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\project-esp32\node-2\build\node-2.elf D:\project-esp32\node-2\build\bootloader\bootloader.elf --force-color -m 'D:\espidf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\espidf\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 20 2026 22:36:49[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=097a8h ( 38824) map[0m
+[0;32mI (99) esp_image: segment 1: paddr=000197d0 vaddr=3ffb0000 size=02834h ( 10292) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001c00c vaddr=40080000 size=0400ch ( 16396) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=107c8h ( 67528) map[0m
+[0;32mI (134) esp_image: segment 4: paddr=000307f0 vaddr=4008400c size=08e0ch ( 36364) load[0m
+[0;32mI (148) esp_image: segment 5: paddr=00039604 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (155) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (155) boot: Disabling RNG early entropy source...[0m
+[0;32mI (166) cpu_start: Multicore app[0m
+[0;32mI (175) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (175) cpu_start: Pro cpu start user code[0m
+[0;32mI (175) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (177) app_init: Application information:[0m
+[0;32mI (181) app_init: Project name:     node-2[0m
+[0;32mI (184) app_init: App version:      1[0m
+[0;32mI (188) app_init: Compile time:     Mar 20 2026 22:36:05[0m
+[0;32mI (193) app_init: ELF file SHA256:  6ffd9f8c2...[0m
+[0;32mI (197) app_init: ESP-IDF:          v5.5.3[0m
+[0;32mI (201) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (205) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (209) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (213) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (219) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (224) heap_init: At 3FFB3128 len 0002CED8 (179 KiB): DRAM[0m
+[0;32mI (229) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (235) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (240) heap_init: At 4008CE18 len 000131E8 (76 KiB): IRAM[0m
+[0;32mI (247) spi_flash: detected chip: generic[0m
+[0;32mI (249) spi_flash: flash io: dio[0m
+[0;33mW (252) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (265) main_task: Started on CPU0[0m
+[0;32mI (275) main_task: Calling app_main()[0m
+[0;32mI (275) SENSOR: ADC Value: 4095[0m
+[0;32mI (275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (275) main_task: Returned from app_main()[0m
+[0;32mI (1275) SENSOR: ADC Value: 4095[0m
+[0;32mI (1275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (2275) SENSOR: ADC Value: 4095[0m
+[0;32mI (2275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (3275) SENSOR: ADC Value: 4095[0m
+[0;32mI (3275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (4275) SENSOR: ADC Value: 4095[0m
+[0;32mI (4275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (5275) SENSOR: ADC Value: 4095[0m
+[0;32mI (5275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (6275) SENSOR: ADC Value: 4095[0m
+[0;32mI (6275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (7275) SENSOR: ADC Value: 4095[0m
+[0;32mI (7275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (8275) SENSOR: ADC Value: 4095[0m
+[0;32mI (8275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (9275) SENSOR: ADC Value: 4095[0m
+[0;32mI (9275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (10275) SENSOR: ADC Value: 4095[0m
+[0;32mI (10275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (11275) SENSOR: ADC Value: 4095[0m
+[0;32mI (11275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (12275) SENSOR: ADC Value: 4095[0m
+[0;32mI (12275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (13275) SENSOR: ADC Value: 4095[0m
+[0;32mI (13275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (14275) SENSOR: ADC Value: 4095[0m
+[0;32mI (14275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (15275) SENSOR: ADC Value: 4095[0m
+[0;32mI (15275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (16275) SENSOR: ADC Value: 4095[0m
+[0;32mI (16275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (17275) SENSOR: ADC Value: 4095[0m
+[0;32mI (17275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (18275) SENSOR: ADC Value: 4095[0m
+[0;32mI (18275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (19275) SENSOR: ADC Value: 4095[0m
+[0;32mI (19275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (20275) SENSOR: ADC Value: 4095[0m
+[0;32mI (20275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (21275) SENSOR: ADC Value: 4095[0m
+[0;32mI (21275) SENSOR: Water Level: 4.00 cm[0m
+[0;32mI (22275) SENSOR: ADC Value: 909[0m
+[0;32mI (22275) SENSOR: Water Level: 0.89 cm[0m
+[0;32mI (23275) SENSOR: ADC Value: 0[0m
+[0;32mI (23275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (24275) SENSOR: ADC Value: 0[0m
+[0;32mI (24275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (25275) SENSOR: ADC Value: 0[0m
+[0;32mI (25275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (26275) SENSOR: ADC Value: 592[0m
+[0;32mI (26275) SENSOR: Water Level: 0.58 cm[0m
+[0;32mI (27275) SENSOR: ADC Value: 1699[0m
+[0;32mI (27275) SENSOR: Water Level: 1.66 cm[0m
+[0;32mI (28275) SENSOR: ADC Value: 781[0m
+[0;32mI (28275) SENSOR: Water Level: 0.76 cm[0m
+[0;32mI (29275) SENSOR: ADC Value: 0[0m
+[0;32mI (29275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (30275) SENSOR: ADC Value: 0[0m
+[0;32mI (30275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (31275) SENSOR: ADC Value: 257[0m
+[0;32mI (31275) SENSOR: Water Level: 0.25 cm[0m
+[0;32mI (32275) SENSOR: ADC Value: 1664[0m
+[0;32mI (32275) SENSOR: Water Level: 1.63 cm[0m
+[0;32mI (33275) SENSOR: ADC Value: 823[0m
+[0;32mI (33275) SENSOR: Water Level: 0.80 cm[0m
+[0;32mI (34275) SENSOR: ADC Value: 0[0m
+[0;32mI (34275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (35275) SENSOR: ADC Value: 0[0m
+[0;32mI (35275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (36275) SENSOR: ADC Value: 606[0m
+[0;32mI (36275) SENSOR: Water Level: 0.59 cm[0m
+[0;32mI (37275) SENSOR: ADC Value: 1585[0m
+[0;32mI (37275) SENSOR: Water Level: 1.55 cm[0m
+[0;32mI (38275) SENSOR: ADC Value: 101[0m
+[0;32mI (38275) SENSOR: Water Level: 0.10 cm[0m
+[0;32mI (39275) SENSOR: ADC Value: 0[0m
+[0;32mI (39275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (40275) SENSOR: ADC Value: 0[0m
+[0;32mI (40275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (41275) SENSOR: ADC Value: 1456[0m
+[0;32mI (41275) SENSOR: Water Level: 1.42 cm[0m
+[0;32mI (42275) SENSOR: ADC Value: 1215[0m
+[0;32mI (42275) SENSOR: Water Level: 1.19 cm[0m
+[0;32mI (43275) SENSOR: ADC Value: 0[0m
+[0;32mI (43275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (44275) SENSOR: ADC Value: 0[0m
+[0;32mI (44275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (45275) SENSOR: ADC Value: 186[0m
+[0;32mI (45275) SENSOR: Water Level: 0.18 cm[0m
+[0;32mI (46275) SENSOR: ADC Value: 1690[0m
+[0;32mI (46275) SENSOR: Water Level: 1.65 cm[0m
+[0;32mI (47275) SENSOR: ADC Value: 968[0m
+[0;32mI (47275) SENSOR: Water Level: 0.95 cm[0m
+[0;32mI (48275) SENSOR: ADC Value: 0[0m
+[0;32mI (48275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (49275) SENSOR: ADC Value: 0[0m
+[0;32mI (49275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (50275) SENSOR: ADC Value: 401[0m
+[0;32mI (50275) SENSOR: Water Level: 0.39 cm[0m
+[0;32mI (51275) SENSOR: ADC Value: 1699[0m
+[0;32mI (51275) SENSOR: Water Level: 1.66 cm[0m
+[0;32mI (52275) SENSOR: ADC Value: 383[0m
+[0;32mI (52275) SENSOR: Water Level: 0.37 cm[0m
+[0;32mI (53275) SENSOR: ADC Value: 0[0m
+[0;32mI (53275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (54275) SENSOR: ADC Value: 0[0m
+[0;32mI (54275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (55275) SENSOR: ADC Value: 1519[0m
+[0;32mI (55275) SENSOR: Water Level: 1.48 cm[0m
+[0;32mI (56275) SENSOR: ADC Value: 1136[0m
+[0;32mI (56275) SENSOR: Water Level: 1.11 cm[0m
+[0;32mI (57275) SENSOR: ADC Value: 0[0m
+[0;32mI (57275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (58275) SENSOR: ADC Value: 0[0m
+[0;32mI (58275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (59275) SENSOR: ADC Value: 490[0m
+[0;32mI (59275) SENSOR: Water Level: 0.48 cm[0m
+[0;32mI (60275) SENSOR: ADC Value: 1654[0m
+[0;32mI (60275) SENSOR: Water Level: 1.62 cm[0m
+[0;32mI (61275) SENSOR: ADC Value: 0[0m
+[0;32mI (61275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (62275) SENSOR: ADC Value: 0[0m
+[0;32mI (62275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (63275) SENSOR: ADC Value: 128[0m
+[0;32mI (63275) SENSOR: Water Level: 0.13 cm[0m
+[0;32mI (64275) SENSOR: ADC Value: 1764[0m
+[0;32mI (64275) SENSOR: Water Level: 1.72 cm[0m
+[0;32mI (65275) SENSOR: ADC Value: 689[0m
+[0;32mI (65275) SENSOR: Water Level: 0.67 cm[0m
+[0;32mI (66275) SENSOR: ADC Value: 0[0m
+[0;32mI (66275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (67275) SENSOR: ADC Value: 0[0m
+[0;32mI (67275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (68275) SENSOR: ADC Value: 1233[0m
+[0;32mI (68275) SENSOR: Water Level: 1.20 cm[0m
+[0;32mI (69275) SENSOR: ADC Value: 1450[0m
+[0;32mI (69275) SENSOR: Water Level: 1.42 cm[0m
+[0;32mI (70275) SENSOR: ADC Value: 0[0m
+[0;32mI (70275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (71275) SENSOR: ADC Value: 0[0m
+[0;32mI (71275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (72275) SENSOR: ADC Value: 16[0m
+[0;32mI (72275) SENSOR: Water Level: 0.02 cm[0m
+[0;32mI (73275) SENSOR: ADC Value: 1363[0m
+[0;32mI (73275) SENSOR: Water Level: 1.33 cm[0m
+[0;32mI (74275) SENSOR: ADC Value: 1568[0m
+[0;32mI (74275) SENSOR: Water Level: 1.53 cm[0m
+[0;32mI (75275) SENSOR: ADC Value: 138[0m
+[0;32mI (75275) SENSOR: Water Level: 0.13 cm[0m
+[0;32mI (76275) SENSOR: ADC Value: 0[0m
+[0;32mI (76275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (77275) SENSOR: ADC Value: 0[0m
+[0;32mI (77275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (78275) SENSOR: ADC Value: 722[0m
+[0;32mI (78275) SENSOR: Water Level: 0.71 cm[0m
+[0;32mI (79275) SENSOR: ADC Value: 1751[0m
+[0;32mI (79275) SENSOR: Water Level: 1.71 cm[0m
+[0;32mI (80275) SENSOR: ADC Value: 462[0m
+[0;32mI (80275) SENSOR: Water Level: 0.45 cm[0m
+[0;32mI (81275) SENSOR: ADC Value: 0[0m
+[0;32mI (81275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (82275) SENSOR: ADC Value: 0[0m
+[0;32mI (82275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (83275) SENSOR: ADC Value: 889[0m
+[0;32mI (83275) SENSOR: Water Level: 0.87 cm[0m
+[0;32mI (84275) SENSOR: ADC Value: 1488[0m
+[0;32mI (84275) SENSOR: Water Level: 1.45 cm[0m
+[0;32mI (85275) SENSOR: ADC Value: 0[0m
+[0;32mI (85275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (86275) SENSOR: ADC Value: 0[0m
+[0;32mI (86275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (87275) SENSOR: ADC Value: 55[0m
+[0;32mI (87275) SENSOR: Water Level: 0.05 cm[0m
+[0;32mI (88275) SENSOR: ADC Value: 1571[0m
+[0;32mI (88275) SENSOR: Water Level: 1.53 cm[0m
+[0;32mI (89275) SENSOR: ADC Value: 933[0m
+[0;32mI (89275) SENSOR: Water Level: 0.91 cm[0m
+[0;32mI (90275) SENSOR: ADC Value: 0[0m
+[0;32mI (90275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (91275) SENSOR: ADC Value: 0[0m
+[0;32mI (91275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (92275) SENSOR: ADC Value: 336[0m
+[0;32mI (92275) SENSOR: Water Level: 0.33 cm[0m
+[0;32mI (93275) SENSOR: ADC Value: 1587[0m
+[0;32mI (93275) SENSOR: Water Level: 1.55 cm[0m
+[0;32mI (94275) SENSOR: ADC Value: 507[0m
+[0;32mI (94275) SENSOR: Water Level: 0.50 cm[0m
+[0;32mI (95275) SENSOR: ADC Value: 0[0m
+[0;32mI (95275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (96275) SENSOR: ADC Value: 0[0m
+[0;32mI (96275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (97275) SENSOR: ADC Value: 865[0m
+[0;32mI (97275) SENSOR: Water Level: 0.84 cm[0m
+[0;32mI (98275) SENSOR: ADC Value: 1571[0m
+[0;32mI (98275) SENSOR: Water Level: 1.53 cm[0m
+[0;32mI (99275) SENSOR: ADC Value: 279[0m
+[0;32mI (99275) SENSOR: Water Level: 0.27 cm[0m
+[0;32mI (100275) SENSOR: ADC Value: 0[0m
+[0;32mI (100275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (101275) SENSOR: ADC Value: 0[0m
+[0;32mI (101275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (102275) SENSOR: ADC Value: 1075[0m
+[0;32mI (102275) SENSOR: Water Level: 1.05 cm[0m
+[0;32mI (103275) SENSOR: ADC Value: 1505[0m
+[0;32mI (103275) SENSOR: Water Level: 1.47 cm[0m
+[0;32mI (104275) SENSOR: ADC Value: 0[0m
+[0;32mI (104275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (105275) SENSOR: ADC Value: 0[0m
+[0;32mI (105275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (106275) SENSOR: ADC Value: 47[0m
+[0;32mI (106275) SENSOR: Water Level: 0.05 cm[0m
+[0;32mI (107275) SENSOR: ADC Value: 1680[0m
+[0;32mI (107275) SENSOR: Water Level: 1.64 cm[0m
+[0;32mI (108275) SENSOR: ADC Value: 1008[0m
+[0;32mI (108275) SENSOR: Water Level: 0.98 cm[0m
+[0;32mI (109275) SENSOR: ADC Value: 0[0m
+[0;32mI (109275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (110275) SENSOR: ADC Value: 0[0m
+[0;32mI (110275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (111275) SENSOR: ADC Value: 367[0m
+[0;32mI (111275) SENSOR: Water Level: 0.36 cm[0m
+[0;32mI (112275) SENSOR: ADC Value: 1696[0m
+[0;32mI (112275) SENSOR: Water Level: 1.66 cm[0m
+[0;32mI (113275) SENSOR: ADC Value: 471[0m
+[0;32mI (113275) SENSOR: Water Level: 0.46 cm[0m
+[0;32mI (114275) SENSOR: ADC Value: 0[0m
+[0;32mI (114275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (115275) SENSOR: ADC Value: 0[0m
+[0;32mI (115275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (116275) SENSOR: ADC Value: 816[0m
+[0;32mI (116275) SENSOR: Water Level: 0.80 cm[0m
+[0;32mI (117275) SENSOR: ADC Value: 1675[0m
+[0;32mI (117275) SENSOR: Water Level: 1.64 cm[0m
+[0;32mI (118275) SENSOR: ADC Value: 342[0m
+[0;32mI (118275) SENSOR: Water Level: 0.33 cm[0m
+[0;32mI (119275) SENSOR: ADC Value: 0[0m
+[0;32mI (119275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (120275) SENSOR: ADC Value: 0[0m
+[0;32mI (120275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (121275) SENSOR: ADC Value: 755[0m
+[0;32mI (121275) SENSOR: Water Level: 0.74 cm[0m
+[0;32mI (122275) SENSOR: ADC Value: 1661[0m
+[0;32mI (122275) SENSOR: Water Level: 1.62 cm[0m
+[0;32mI (123275) SENSOR: ADC Value: 506[0m
+[0;32mI (123275) SENSOR: Water Level: 0.49 cm[0m
+[0;32mI (124275) SENSOR: ADC Value: 0[0m
+[0;32mI (124275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (125275) SENSOR: ADC Value: 0[0m
+[0;32mI (125275) SENSOR: Water Level: 0.00 cm[0m
+[0;32mI (126275) SENSOR: ADC Value: 268[0m
+[0;32mI (126275) SENSOR: Water Level: 0.26 cm[0m
+[0;32mI (127275) SENSOR: ADC Value: 1713[0m
+[0;32mI (127275) SENSOR: Water Level: 1.67 cm[0m
+[0;32mI (128275) SENSOR: ADC Value: 961[0m
+[0;32mI (128275) SENSOR: Water Level: 0.94 cm[0m
+[0;32mI (129275) SENSOR: ADC Value: 0[0m
+[0;32mI (129275

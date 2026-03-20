@@ -1,0 +1,2 @@
+source D:/project-esp32/node-2/build/gdbinit/symbols
+source D:/project-esp32/node-2/build/gdbinit/connect
