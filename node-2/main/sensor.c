@@ -23,7 +23,7 @@ void init_adc() {
     ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, &adc1_handle));
 
     adc_oneshot_chan_cfg_t config = {
-        .atten = ADC_ATTEN_DB_11,
+        .atten = ADC_ATTEN_DB_12,
         .bitwidth = ADC_BITWIDTH_DEFAULT,
     };
 
@@ -40,11 +40,11 @@ void sensor_task(void *pvParameters)
 
         ESP_LOGI("SENSOR", "ADC Value: %d", adc_value);
 
-        water_level = (adc_value / 4095.0) * 4.0;
+        water_level = (adc_value / 4095.0) * 4.0 + 0.5;
 
-        ESP_LOGI("SENSOR", "Water Level: %.2f cm", water_level);
+        
 
-        // 🔥 gửi queue
+    
         xQueueOverwrite(control_queue, &water_level);
 
         vTaskDelay(pdMS_TO_TICKS(1000));
