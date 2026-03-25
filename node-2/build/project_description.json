@@ -1240,7 +1240,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/project-esp32/node-2/build/esp-idf/main/libmain.a",
-            "sources": [ "D:/project-esp32/node-2/main/sensor.c", "D:/project-esp32/node-2/main/node-2.c", "D:/project-esp32/node-2/main/control.c" ],
+            "sources": [ "D:/project-esp32/node-2/main/sensor.c", "D:/project-esp32/node-2/main/node-2.c", "D:/project-esp32/node-2/main/control.c", "D:/project-esp32/node-2/main/mqtt_task.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
