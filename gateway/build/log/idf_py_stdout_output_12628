@@ -1,0 +1,1691 @@
+Command: D:\espidf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\espidf\Espressif\frameworks\esp-idf-v5.5.3\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\project-esp32\gateway\build\gateway.elf D:\project-esp32\gateway\build\bootloader\bootloader.elf --force-color -m 'D:\espidf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\espidf\Espressif\frameworks\esp-idf-v5.5.3\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.3-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Mar 25 2026 19:04:20[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (36) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d9b0h (121264) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002d9d8 vaddr=3ffb0000 size=02640h (  9792) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=9d544h (644420) map[0m
+[0;32mI (352) esp_image: segment 3: paddr=000cd56c vaddr=3ffb2640 size=01d08h (  7432) load[0m
+[0;32mI (355) esp_image: segment 4: paddr=000cf27c vaddr=40080000 size=18134h ( 98612) load[0m
+[0;32mI (395) esp_image: segment 5: paddr=000e73b8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (407) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (407) boot: Disabling RNG early entropy source...[0m
+[0;32mI (417) cpu_start: Multicore app[0m
+[0;32mI (426) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (426) cpu_start: Pro cpu start user code[0m
+[0;32mI (426) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (428) app_init: Application information:[0m
+[0;32mI (432) app_init: Project name:     gateway[0m
+[0;32mI (436) app_init: App version:      f640484-dirty[0m
+[0;32mI (440) app_init: Compile time:     Mar 25 2026 20:01:07[0m
+[0;32mI (445) app_init: ELF file SHA256:  8f4c9f3a0...[0m
+[0;32mI (449) app_init: ESP-IDF:          v5.5.3-dirty[0m
+[0;32mI (454) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (457) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (461) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (466) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (472) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (477) heap_init: At 3FFB8C58 len 000273A8 (156 KiB): DRAM[0m
+[0;32mI (482) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (487) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 40098134 len 00007ECC (31 KiB): IRAM[0m
+[0;32mI (500) spi_flash: detected chip: generic[0m
+[0;32mI (502) spi_flash: flash io: dio[0m
+[0;33mW (505) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (518) main_task: Started on CPU0[0m
+[0;32mI (528) main_task: Calling app_main()[0m
+[0;32mI (548) main_task: Returned from app_main()[0m
+[0;32mI (558) wifi:wifi driver task: 3ffc1e70, prio:23, stack:6656, core=0[0m
+[0;32mI (568) wifi:wifi firmware version: 4df78f2[0m
+[0;32mI (568) wifi:wifi certification version: v7.0[0m
+[0;32mI (568) wifi:config NVS flash: enabled[0m
+[0;32mI (568) wifi:config nano formatting: disabled[0m
+[0;32mI (568) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (578) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (578) wifi:Init management short buffer num: 32[0m
+[0;32mI (588) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (588) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (598) wifi:Init static rx buffer num: 10[0m
+[0;32mI (598) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (598) wifi_init: rx ba win: 6[0m
+[0;32mI (608) wifi_init: accept mbox: 6[0m
+[0;32mI (608) wifi_init: tcpip mbox: 32[0m
+[0;32mI (608) wifi_init: udp mbox: 6[0m
+[0;32mI (608) wifi_init: tcp mbox: 6[0m
+[0;32mI (618) wifi_init: tcp tx win: 5760[0m
+[0;32mI (618) wifi_init: tcp rx win: 5760[0m
+[0;32mI (618) wifi_init: tcp mss: 1440[0m
+[0;32mI (628) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (628) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (638) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (728) wifi:mode : sta (6c:c8:40:92:19:2c)[0m
+[0;32mI (728) wifi:enable tsf[0m
+[0;32mI (728) mqtt_sub: Wi-Fi init done[0m
+[0;32mI (818) wifi:new:<2,1>, old:<1,0>, ap:<255,255>, sta:<2,1>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (818) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (828) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (838) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (948) wifi:connected with Tongtai_Office, aid = 8, channel 2, 40U, bssid = ac:15:a2:df:02:c4[0m
+[0;32mI (948) wifi:security: WPA2-PSK, phy: bgn, rssi: -44[0m
+[0;32mI (958) wifi:pm start, type: 1[0m
+
+[0;32mI (958) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (988) wifi:<ba-add>idx:0 (ifx:0, ac:15:a2:df:02:c4), tid:0, ssn:2, winSize:64[0m
+[0;32mI (1018) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1028) wifi:<ba-add>idx:1 (ifx:0, ac:15:a2:df:02:c4), tid:1, ssn:1, winSize:64[0m
+[0;32mI (2498) esp_netif_handlers: sta ip: 192.168.0.114, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2498) mqtt_sub: Got IP: 192.168.0.114[0m
+[0;32mI (2498) mqtt_sub: Wi-Fi connected, starting MQTT[0m
+[0;32mI (3308) mqtt_sub: MQTT connected[0m
+[0;32mI (4068) mqtt_sub: MQTT message received[0m
+[0;32mI (4068) mqtt_sub: topic: node2/status[0m
+[0;32mI (4068) mqtt_sub: ts_ms: 96587[0m
+[0;32mI (4068) mqtt_sub: pump: true[0m
+[0;32mI (4068) mqtt_sub: flooded: true[0m
+[0;32mI (4068) mqtt_sub: water_cm: 2.44[0m
+[0;32mI (4078) mqtt_sub: rx_timestamp_ms: 3571[0m
+[0;32mI (4838) mqtt_sub: MQTT message received[0m
+[0;32mI (4838) mqtt_sub: topic: node2/log[0m
+[0;32mI (4838) mqtt_sub: ts_ms: 97591[0m
+[0;32mI (4848) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (4848) mqtt_sub: pump: (missing)[0m
+[0;32mI (4848) mqtt_sub: flooded: (missing)[0m
+[0;32mI (4848) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (4858) mqtt_sub: rx_timestamp_ms: 4348[0m
+[0;32mI (5028) mqtt_sub: MQTT message received[0m
+[0;32mI (5028) mqtt_sub: topic: node2/status[0m
+[0;32mI (5028) mqtt_sub: ts_ms: 97596[0m
+[0;32mI (5028) mqtt_sub: pump: false[0m
+[0;32mI (5028) mqtt_sub: flooded: false[0m
+[0;32mI (5038) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (5038) mqtt_sub: rx_timestamp_ms: 4535[0m
+[0;32mI (5758) mqtt_sub: MQTT message received[0m
+[0;32mI (5758) mqtt_sub: topic: node2/log[0m
+[0;32mI (5758) mqtt_sub: ts_ms: 98591[0m
+[0;32mI (5758) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (5758) mqtt_sub: pump: (missing)[0m
+[0;32mI (5768) mqtt_sub: flooded: (missing)[0m
+[0;32mI (5768) mqtt_sub: water_cm: 2.13[0m
+[0;32mI (5768) mqtt_sub: rx_timestamp_ms: 5265[0m
+[0;32mI (6068) mqtt_sub: MQTT message received[0m
+[0;32mI (6068) mqtt_sub: topic: node2/status[0m
+[0;32mI (6068) mqtt_sub: ts_ms: 98597[0m
+[0;32mI (6068) mqtt_sub: pump: true[0m
+[0;32mI (6068) mqtt_sub: flooded: true[0m
+[0;32mI (6068) mqtt_sub: water_cm: 2.13[0m
+[0;32mI (6078) mqtt_sub: rx_timestamp_ms: 5573[0m
+[0;32mI (6768) mqtt_sub: MQTT message received[0m
+[0;32mI (6768) mqtt_sub: topic: node2/log[0m
+[0;32mI (6768) mqtt_sub: ts_ms: 99601[0m
+[0;32mI (6768) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (6768) mqtt_sub: pump: (missing)[0m
+[0;32mI (6778) mqtt_sub: flooded: (missing)[0m
+[0;32mI (6778) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (6778) mqtt_sub: rx_timestamp_ms: 6274[0m
+[0;32mI (7078) mqtt_sub: MQTT message received[0m
+[0;32mI (7078) mqtt_sub: topic: node2/status[0m
+[0;32mI (7078) mqtt_sub: ts_ms: 99607[0m
+[0;32mI (7078) mqtt_sub: pump: false[0m
+[0;32mI (7078) mqtt_sub: flooded: false[0m
+[0;32mI (7078) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (7088) mqtt_sub: rx_timestamp_ms: 6583[0m
+[0;32mI (7788) mqtt_sub: MQTT message received[0m
+[0;32mI (7788) mqtt_sub: topic: node2/status[0m
+[0;32mI (7798) mqtt_sub: ts_ms: 100611[0m
+[0;32mI (7798) mqtt_sub: pump: false[0m
+[0;32mI (7798) mqtt_sub: flooded: false[0m
+[0;32mI (7798) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (7798) mqtt_sub: rx_timestamp_ms: 7298[0m
+[0;32mI (8818) mqtt_sub: MQTT message received[0m
+[0;32mI (8818) mqtt_sub: topic: node2/status[0m
+[0;32mI (8818) mqtt_sub: ts_ms: 101611[0m
+[0;32mI (8818) mqtt_sub: pump: false[0m
+[0;32mI (8818) mqtt_sub: flooded: false[0m
+[0;32mI (8818) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (8828) mqtt_sub: rx_timestamp_ms: 8323[0m
+[0;32mI (9828) mqtt_sub: MQTT message received[0m
+[0;32mI (9828) mqtt_sub: topic: node2/status[0m
+[0;32mI (9838) mqtt_sub: ts_ms: 102611[0m
+[0;32mI (9838) mqtt_sub: pump: false[0m
+[0;32mI (9838) mqtt_sub: flooded: false[0m
+[0;32mI (9838) mqtt_sub: water_cm: 1.66[0m
+[0;32mI (9838) mqtt_sub: rx_timestamp_ms: 9338[0m
+[0;32mI (10768) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (10768) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (10768) wifi:[ADDBA]RX DELBA, reason:39, delete tid:1, initiator:1(originator)[0m
+[0;32mI (10778) wifi:<ba-del>idx:1, tid:1[0m
+[0;32mI (10788) mqtt_sub: MQTT message received[0m
+[0;32mI (10788) mqtt_sub: topic: node2/log[0m
+[0;32mI (10788) mqtt_sub: ts_ms: 103612[0m
+[0;32mI (10788) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (10798) mqtt_sub: pump: (missing)[0m
+[0;32mI (10798) mqtt_sub: flooded: (missing)[0m
+[0;32mI (10798) mqtt_sub: water_cm: 2.66[0m
+[0;32mI (10808) mqtt_sub: rx_timestamp_ms: 10291[0m
+[0;32mI (11028) wifi:<ba-add>idx:0 (ifx:0, ac:15:a2:df:02:c4), tid:1, ssn:19, winSize:64[0m
+[0;32mI (11028) mqtt_sub: MQTT message received[0m
+[0;32mI (11028) mqtt_sub: topic: node2/status[0m
+[0;32mI (11028) mqtt_sub: ts_ms: 103620[0m
+[0;32mI (11038) mqtt_sub: pump: true[0m
+[0;32mI (11038) mqtt_sub: flooded: true[0m
+[0;32mI (11038) mqtt_sub: water_cm: 2.66[0m
+[0;32mI (11038) mqtt_sub: rx_timestamp_ms: 10537[0m
+[0;32mI (11808) mqtt_sub: MQTT message received[0m
+[0;32mI (11808) mqtt_sub: topic: node2/log[0m
+[0;32mI (11808) mqtt_sub: ts_ms: 104611[0m
+[0;32mI (11808) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (11808) mqtt_sub: pump: (missing)[0m
+[0;32mI (11808) mqtt_sub: flooded: (missing)[0m
+[0;32mI (11818) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (11818) mqtt_sub: rx_timestamp_ms: 11311[0m
+[0;32mI (12028) mqtt_sub: MQTT message received[0m
+[0;32mI (12028) mqtt_sub: topic: node2/status[0m
+[0;32mI (12028) mqtt_sub: ts_ms: 104618[0m
+[0;32mI (12028) mqtt_sub: pump: false[0m
+[0;32mI (12028) mqtt_sub: flooded: false[0m
+[0;32mI (12038) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (12038) mqtt_sub: rx_timestamp_ms: 11536[0m
+[0;32mI (12848) mqtt_sub: MQTT message received[0m
+[0;32mI (12848) mqtt_sub: topic: node2/log[0m
+[0;32mI (12848) mqtt_sub: ts_ms: 105621[0m
+[0;32mI (12848) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (12848) mqtt_sub: pump: (missing)[0m
+[0;32mI (12858) mqtt_sub: flooded: (missing)[0m
+[0;32mI (12858) mqtt_sub: water_cm: 2.98[0m
+[0;32mI (12858) mqtt_sub: rx_timestamp_ms: 12354[0m
+[0;32mI (13058) mqtt_sub: MQTT message received[0m
+[0;32mI (13058) mqtt_sub: topic: node2/status[0m
+[0;32mI (13058) mqtt_sub: ts_ms: 105627[0m
+[0;32mI (13058) mqtt_sub: pump: true[0m
+[0;32mI (13058) mqtt_sub: flooded: true[0m
+[0;32mI (13068) mqtt_sub: water_cm: 2.98[0m
+[0;32mI (13068) mqtt_sub: rx_timestamp_ms: 12565[0m
+[0;32mI (13838) mqtt_sub: MQTT message received[0m
+[0;32mI (13838) mqtt_sub: topic: node2/log[0m
+[0;32mI (13838) mqtt_sub: ts_ms: 106631[0m
+[0;32mI (13838) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (13838) mqtt_sub: pump: (missing)[0m
+[0;32mI (13848) mqtt_sub: flooded: (missing)[0m
+[0;32mI (13848) mqtt_sub: water_cm: 1.11[0m
+[0;32mI (13848) mqtt_sub: rx_timestamp_ms: 13345[0m
+[0;32mI (14338) mqtt_sub: MQTT message received[0m
+[0;32mI (14338) mqtt_sub: topic: node2/status[0m
+[0;32mI (14338) mqtt_sub: ts_ms: 106637[0m
+[0;32mI (14338) mqtt_sub: pump: false[0m
+[0;32mI (14338) mqtt_sub: flooded: false[0m
+[0;32mI (14338) mqtt_sub: water_cm: 1.11[0m
+[0;32mI (14348) mqtt_sub: rx_timestamp_ms: 13841[0m
+[0;32mI (14858) mqtt_sub: MQTT message received[0m
+[0;32mI (14858) mqtt_sub: topic: node2/status[0m
+[0;32mI (14858) mqtt_sub: ts_ms: 107641[0m
+[0;32mI (14858) mqtt_sub: pump: false[0m
+[0;32mI (14858) mqtt_sub: flooded: false[0m
+[0;32mI (14868) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (14868) mqtt_sub: rx_timestamp_ms: 14365[0m
+[0;32mI (15878) mqtt_sub: MQTT message received[0m
+[0;32mI (15878) mqtt_sub: topic: node2/status[0m
+[0;32mI (15878) mqtt_sub: ts_ms: 108641[0m
+[0;32mI (15878) mqtt_sub: pump: false[0m
+[0;32mI (15878) mqtt_sub: flooded: false[0m
+[0;32mI (15878) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (15888) mqtt_sub: rx_timestamp_ms: 15381[0m
+[0;32mI (17618) mqtt_sub: MQTT message received[0m
+[0;32mI (17618) mqtt_sub: topic: node2/log[0m
+[0;32mI (17618) mqtt_sub: ts_ms: 109641[0m
+[0;32mI (17618) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (17618) mqtt_sub: pump: (missing)[0m
+[0;32mI (17628) mqtt_sub: flooded: (missing)[0m
+[0;32mI (17628) mqtt_sub: water_cm: 2.39[0m
+[0;32mI (17628) mqtt_sub: rx_timestamp_ms: 17123[0m
+[0;32mI (17638) mqtt_sub: MQTT message received[0m
+[0;32mI (17638) mqtt_sub: topic: node2/status[0m
+[0;32mI (17638) mqtt_sub: ts_ms: 109647[0m
+[0;32mI (17648) mqtt_sub: pump: true[0m
+[0;32mI (17648) mqtt_sub: flooded: true[0m
+[0;32mI (17648) mqtt_sub: water_cm: 2.39[0m
+[0;32mI (17658) mqtt_sub: rx_timestamp_ms: 17144[0m
+[0;32mI (18028) mqtt_sub: MQTT message received[0m
+[0;32mI (18028) mqtt_sub: topic: node2/log[0m
+[0;32mI (18028) mqtt_sub: ts_ms: 110651[0m
+[0;32mI (18028) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (18028) mqtt_sub: pump: (missing)[0m
+[0;32mI (18038) mqtt_sub: flooded: (missing)[0m
+[0;32mI (18038) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (18038) mqtt_sub: rx_timestamp_ms: 17535[0m
+[0;32mI (18048) mqtt_sub: MQTT message received[0m
+[0;32mI (18048) mqtt_sub: topic: node2/status[0m
+[0;32mI (18058) mqtt_sub: ts_ms: 110657[0m
+[0;32mI (18058) mqtt_sub: pump: false[0m
+[0;32mI (18058) mqtt_sub: flooded: false[0m
+[0;32mI (18058) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (18068) mqtt_sub: rx_timestamp_ms: 17556[0m
+[0;32mI (18848) mqtt_sub: MQTT message received[0m
+[0;32mI (18848) mqtt_sub: topic: node2/status[0m
+[0;32mI (18848) mqtt_sub: ts_ms: 111661[0m
+[0;32mI (18848) mqtt_sub: pump: false[0m
+[0;32mI (18848) mqtt_sub: flooded: false[0m
+[0;32mI (18848) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (18858) mqtt_sub: rx_timestamp_ms: 18352[0m
+[0;32mI (19868) mqtt_sub: MQTT message received[0m
+[0;32mI (19878) mqtt_sub: topic: node2/status[0m
+[0;32mI (19878) mqtt_sub: ts_ms: 112661[0m
+[0;32mI (19878) mqtt_sub: pump: false[0m
+[0;32mI (19878) mqtt_sub: flooded: false[0m
+[0;32mI (19878) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (19878) mqtt_sub: rx_timestamp_ms: 19379[0m
+[0;32mI (20908) mqtt_sub: MQTT message received[0m
+[0;32mI (20908) mqtt_sub: topic: node2/status[0m
+[0;32mI (20908) mqtt_sub: ts_ms: 113661[0m
+[0;32mI (20908) mqtt_sub: pump: false[0m
+[0;32mI (20908) mqtt_sub: flooded: false[0m
+[0;32mI (20908) mqtt_sub: water_cm: 1.51[0m
+[0;32mI (20908) mqtt_sub: rx_timestamp_ms: 20410[0m
+[0;32mI (21818) mqtt_sub: MQTT message received[0m
+[0;32mI (21818) mqtt_sub: topic: node2/log[0m
+[0;32mI (21818) mqtt_sub: ts_ms: 114661[0m
+[0;32mI (21818) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (21818) mqtt_sub: pump: (missing)[0m
+[0;32mI (21828) mqtt_sub: flooded: (missing)[0m
+[0;32mI (21828) mqtt_sub: water_cm: 2.99[0m
+[0;32mI (21828) mqtt_sub: rx_timestamp_ms: 21323[0m
+[0;32mI (22038) mqtt_sub: MQTT message received[0m
+[0;32mI (22038) mqtt_sub: topic: node2/status[0m
+[0;32mI (22048) mqtt_sub: ts_ms: 114667[0m
+[0;32mI (22048) mqtt_sub: pump: true[0m
+[0;32mI (22048) mqtt_sub: flooded: true[0m
+[0;32mI (22048) mqtt_sub: water_cm: 2.99[0m
+[0;32mI (22048) mqtt_sub: rx_timestamp_ms: 21548[0m
+[0;32mI (22848) mqtt_sub: MQTT message received[0m
+[0;32mI (22848) mqtt_sub: topic: node2/log[0m
+[0;32mI (22848) mqtt_sub: ts_ms: 115671[0m
+[0;32mI (22848) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (22848) mqtt_sub: pump: (missing)[0m
+[0;32mI (22848) mqtt_sub: flooded: (missing)[0m
+[0;32mI (22858) mqtt_sub: water_cm: 0.97[0m
+[0;32mI (22858) mqtt_sub: rx_timestamp_ms: 22350[0m
+[0;32mI (23038) mqtt_sub: MQTT message received[0m
+[0;32mI (23038) mqtt_sub: topic: node2/status[0m
+[0;32mI (23038) mqtt_sub: ts_ms: 115677[0m
+[0;32mI (23038) mqtt_sub: pump: false[0m
+[0;32mI (23038) mqtt_sub: flooded: false[0m
+[0;32mI (23038) mqtt_sub: water_cm: 0.97[0m
+[0;32mI (23048) mqtt_sub: rx_timestamp_ms: 22541[0m
+[0;32mI (23888) mqtt_sub: MQTT message received[0m
+[0;32mI (23888) mqtt_sub: topic: node2/status[0m
+[0;32mI (23888) mqtt_sub: ts_ms: 116681[0m
+[0;32mI (23888) mqtt_sub: pump: false[0m
+[0;32mI (23888) mqtt_sub: flooded: false[0m
+[0;32mI (23898) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (23898) mqtt_sub: rx_timestamp_ms: 23394[0m
+[0;32mI (24888) mqtt_sub: MQTT message received[0m
+[0;32mI (24888) mqtt_sub: topic: node2/status[0m
+[0;32mI (24888) mqtt_sub: ts_ms: 117681[0m
+[0;32mI (24888) mqtt_sub: pump: false[0m
+[0;32mI (24898) mqtt_sub: flooded: false[0m
+[0;32mI (24898) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (24898) mqtt_sub: rx_timestamp_ms: 24397[0m
+[0;32mI (25908) mqtt_sub: MQTT message received[0m
+[0;32mI (25908) mqtt_sub: topic: node2/status[0m
+[0;32mI (25918) mqtt_sub: ts_ms: 118681[0m
+[0;32mI (25918) mqtt_sub: pump: false[0m
+[0;32mI (25918) mqtt_sub: flooded: false[0m
+[0;32mI (25918) mqtt_sub: water_cm: 1.74[0m
+[0;32mI (25918) mqtt_sub: rx_timestamp_ms: 25419[0m
+[0;32mI (26838) mqtt_sub: MQTT message received[0m
+[0;32mI (26838) mqtt_sub: topic: node2/log[0m
+[0;32mI (26838) mqtt_sub: ts_ms: 119681[0m
+[0;32mI (26838) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (26838) mqtt_sub: pump: (missing)[0m
+[0;32mI (26838) mqtt_sub: flooded: (missing)[0m
+[0;32mI (26848) mqtt_sub: water_cm: 2.98[0m
+[0;32mI (26848) mqtt_sub: rx_timestamp_ms: 26340[0m
+[0;32mI (27038) mqtt_sub: MQTT message received[0m
+[0;32mI (27038) mqtt_sub: topic: node2/status[0m
+[0;32mI (27038) mqtt_sub: ts_ms: 119688[0m
+[0;32mI (27038) mqtt_sub: pump: true[0m
+[0;32mI (27038) mqtt_sub: flooded: true[0m
+[0;32mI (27038) mqtt_sub: water_cm: 2.98[0m
+[0;32mI (27048) mqtt_sub: rx_timestamp_ms: 26543[0m
+[0;32mI (27858) mqtt_sub: MQTT message received[0m
+[0;32mI (27858) mqtt_sub: topic: node2/log[0m
+[0;32mI (27868) mqtt_sub: ts_ms: 120691[0m
+[0;32mI (27868) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (27868) mqtt_sub: pump: (missing)[0m
+[0;32mI (27868) mqtt_sub: flooded: (missing)[0m
+[0;32mI (27868) mqtt_sub: water_cm: 0.94[0m
+[0;32mI (27878) mqtt_sub: rx_timestamp_ms: 27368[0m
+[0;32mI (28048) mqtt_sub: MQTT message received[0m
+[0;32mI (28048) mqtt_sub: topic: node2/status[0m
+[0;32mI (28048) mqtt_sub: ts_ms: 120697[0m
+[0;32mI (28048) mqtt_sub: pump: false[0m
+[0;32mI (28048) mqtt_sub: flooded: false[0m
+[0;32mI (28048) mqtt_sub: water_cm: 0.94[0m
+[0;32mI (28048) mqtt_sub: rx_timestamp_ms: 27550[0m
+[0;32mI (28918) mqtt_sub: MQTT message received[0m
+[0;32mI (28918) mqtt_sub: topic: node2/status[0m
+[0;32mI (28918) mqtt_sub: ts_ms: 121701[0m
+[0;32mI (28918) mqtt_sub: pump: false[0m
+[0;32mI (28918) mqtt_sub: flooded: false[0m
+[0;32mI (28918) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (28928) mqtt_sub: rx_timestamp_ms: 28422[0m
+[0;32mI (29898) mqtt_sub: MQTT message received[0m
+[0;32mI (29898) mqtt_sub: topic: node2/status[0m
+[0;32mI (29908) mqtt_sub: ts_ms: 122701[0m
+[0;32mI (29908) mqtt_sub: pump: false[0m
+[0;32mI (29908) mqtt_sub: flooded: false[0m
+[0;32mI (29908) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (29908) mqtt_sub: rx_timestamp_ms: 29408[0m
+[0;32mI (30928) mqtt_sub: MQTT message received[0m
+[0;32mI (30928) mqtt_sub: topic: node2/status[0m
+[0;32mI (30928) mqtt_sub: ts_ms: 123701[0m
+[0;32mI (30928) mqtt_sub: pump: false[0m
+[0;32mI (30928) mqtt_sub: flooded: false[0m
+[0;32mI (30928) mqtt_sub: water_cm: 1.25[0m
+[0;32mI (30938) mqtt_sub: rx_timestamp_ms: 30433[0m
+[0;32mI (31848) mqtt_sub: MQTT message received[0m
+[0;32mI (31848) mqtt_sub: topic: node2/log[0m
+[0;32mI (31848) mqtt_sub: ts_ms: 124701[0m
+[0;32mI (31848) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (31858) mqtt_sub: pump: (missing)[0m
+[0;32mI (31858) mqtt_sub: flooded: (missing)[0m
+[0;32mI (31858) mqtt_sub: water_cm: 2.41[0m
+[0;32mI (31868) mqtt_sub: rx_timestamp_ms: 31357[0m
+[0;32mI (32038) mqtt_sub: MQTT message received[0m
+[0;32mI (32038) mqtt_sub: topic: node2/status[0m
+[0;32mI (32048) mqtt_sub: ts_ms: 124708[0m
+[0;32mI (32048) mqtt_sub: pump: true[0m
+[0;32mI (32048) mqtt_sub: flooded: true[0m
+[0;32mI (32048) mqtt_sub: water_cm: 2.41[0m
+[0;32mI (32048) mqtt_sub: rx_timestamp_ms: 31548[0m
+[0;32mI (32898) mqtt_sub: MQTT message received[0m
+[0;32mI (32898) mqtt_sub: topic: node2/log[0m
+[0;32mI (32898) mqtt_sub: ts_ms: 125711[0m
+[0;32mI (32898) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (32898) mqtt_sub: pump: (missing)[0m
+[0;32mI (32898) mqtt_sub: flooded: (missing)[0m
+[0;32mI (32908) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (32908) mqtt_sub: rx_timestamp_ms: 32400[0m
+[0;32mI (33798) mqtt_sub: MQTT message received[0m
+[0;32mI (33798) mqtt_sub: topic: node2/status[0m
+[0;32mI (33798) mqtt_sub: ts_ms: 125717[0m
+[0;32mI (33798) mqtt_sub: pump: false[0m
+[0;32mI (33798) mqtt_sub: flooded: false[0m
+[0;32mI (33798) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (33808) mqtt_sub: rx_timestamp_ms: 33303[0m
+[0;32mI (33998) mqtt_sub: MQTT message received[0m
+[0;32mI (33998) mqtt_sub: topic: node2/status[0m
+[0;32mI (33998) mqtt_sub: ts_ms: 126721[0m
+[0;32mI (33998) mqtt_sub: pump: false[0m
+[0;32mI (34008) mqtt_sub: flooded: false[0m
+[0;32mI (34008) mqtt_sub: water_cm: 0.58[0m
+[0;32mI (34008) mqtt_sub: rx_timestamp_ms: 33507[0m
+[0;32mI (34948) mqtt_sub: MQTT message received[0m
+[0;32mI (34948) mqtt_sub: topic: node2/status[0m
+[0;32mI (34948) mqtt_sub: ts_ms: 127721[0m
+[0;32mI (34948) mqtt_sub: pump: false[0m
+[0;32mI (34948) mqtt_sub: flooded: false[0m
+[0;32mI (34958) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (34958) mqtt_sub: rx_timestamp_ms: 34454[0m
+[0;32mI (35958) mqtt_sub: MQTT message received[0m
+[0;32mI (35958) mqtt_sub: topic: node2/status[0m
+[0;32mI (35958) mqtt_sub: ts_ms: 128721[0m
+[0;32mI (35958) mqtt_sub: pump: false[0m
+[0;32mI (35958) mqtt_sub: flooded: false[0m
+[0;32mI (35958) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (35968) mqtt_sub: rx_timestamp_ms: 35462[0m
+[0;32mI (36868) mqtt_sub: MQTT message received[0m
+[0;32mI (36868) mqtt_sub: topic: node2/status[0m
+[0;32mI (36868) mqtt_sub: ts_ms: 129721[0m
+[0;32mI (36868) mqtt_sub: pump: false[0m
+[0;32mI (36868) mqtt_sub: flooded: false[0m
+[0;32mI (36878) mqtt_sub: water_cm: 1.04[0m
+[0;32mI (36878) mqtt_sub: rx_timestamp_ms: 36375[0m
+[0;32mI (37928) mqtt_sub: MQTT message received[0m
+[0;32mI (37928) mqtt_sub: topic: node2/log[0m
+[0;32mI (37928) mqtt_sub: ts_ms: 130721[0m
+[0;32mI (37928) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (37928) mqtt_sub: pump: (missing)[0m
+[0;32mI (37938) mqtt_sub: flooded: (missing)[0m
+[0;32mI (37938) mqtt_sub: water_cm: 2.18[0m
+[0;32mI (37938) mqtt_sub: rx_timestamp_ms: 37435[0m
+[0;32mI (38028) wifi:<ba-add>idx:1 (ifx:0, ac:15:a2:df:02:c4), tid:0, ssn:9, winSize:64[0m
+[0;32mI (38238) mqtt_sub: MQTT message received[0m
+[0;32mI (38248) mqtt_sub: topic: node2/status[0m
+[0;32mI (38248) mqtt_sub: ts_ms: 130728[0m
+[0;32mI (38248) mqtt_sub: pump: true[0m
+[0;32mI (38248) mqtt_sub: flooded: true[0m
+[0;32mI (38248) mqtt_sub: water_cm: 2.18[0m
+[0;32mI (38248) mqtt_sub: rx_timestamp_ms: 37749[0m
+[0;32mI (38928) mqtt_sub: MQTT message received[0m
+[0;32mI (38928) mqtt_sub: topic: node2/log[0m
+[0;32mI (38928) mqtt_sub: ts_ms: 131731[0m
+[0;32mI (38928) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (38928) mqtt_sub: pump: (missing)[0m
+[0;32mI (38938) mqtt_sub: flooded: (missing)[0m
+[0;32mI (38938) mqtt_sub: water_cm: 0.53[0m
+[0;32mI (38938) mqtt_sub: rx_timestamp_ms: 38433[0m
+[0;32mI (39428) mqtt_sub: MQTT message received[0m
+[0;32mI (39428) mqtt_sub: topic: node2/status[0m
+[0;32mI (39428) mqtt_sub: ts_ms: 131737[0m
+[0;32mI (39428) mqtt_sub: pump: false[0m
+[0;32mI (39428) mqtt_sub: flooded: false[0m
+[0;32mI (39428) mqtt_sub: water_cm: 0.53[0m
+[0;32mI (39428) mqtt_sub: rx_timestamp_ms: 38930[0m
+[0;32mI (39948) mqtt_sub: MQTT message received[0m
+[0;32mI (39948) mqtt_sub: topic: node2/status[0m
+[0;32mI (39948) mqtt_sub: ts_ms: 132741[0m
+[0;32mI (39948) mqtt_sub: pump: false[0m
+[0;32mI (39948) mqtt_sub: flooded: false[0m
+[0;32mI (39948) mqtt_sub: water_cm: 0.64[0m
+[0;32mI (39948) mqtt_sub: rx_timestamp_ms: 39449[0m
+[0;32mI (40988) mqtt_sub: MQTT message received[0m
+[0;32mI (40998) mqtt_sub: topic: node2/status[0m
+[0;32mI (40998) mqtt_sub: ts_ms: 133741[0m
+[0;32mI (40998) mqtt_sub: pump: false[0m
+[0;32mI (40998) mqtt_sub: flooded: false[0m
+[0;32mI (40998) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (40998) mqtt_sub: rx_timestamp_ms: 40499[0m
+[0;32mI (41998) mqtt_sub: MQTT message received[0m
+[0;32mI (41998) mqtt_sub: topic: node2/status[0m
+[0;32mI (41998) mqtt_sub: ts_ms: 134742[0m
+[0;32mI (41998) mqtt_sub: pump: false[0m
+[0;32mI (41998) mqtt_sub: flooded: false[0m
+[0;32mI (42008) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (42008) mqtt_sub: rx_timestamp_ms: 41506[0m
+[0;32mI (42908) mqtt_sub: MQTT message received[0m
+[0;32mI (42908) mqtt_sub: topic: node2/status[0m
+[0;32mI (42908) mqtt_sub: ts_ms: 135741[0m
+[0;32mI (42908) mqtt_sub: pump: false[0m
+[0;32mI (42908) mqtt_sub: flooded: false[0m
+[0;32mI (42918) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (42918) mqtt_sub: rx_timestamp_ms: 42415[0m
+[0;32mI (43948) mqtt_sub: MQTT message received[0m
+[0;32mI (43948) mqtt_sub: topic: node2/status[0m
+[0;32mI (43948) mqtt_sub: ts_ms: 136741[0m
+[0;32mI (43948) mqtt_sub: pump: false[0m
+[0;32mI (43948) mqtt_sub: flooded: false[0m
+[0;32mI (43958) mqtt_sub: water_cm: 1.20[0m
+[0;32mI (43958) mqtt_sub: rx_timestamp_ms: 43456[0m
+[0;32mI (44958) mqtt_sub: MQTT message received[0m
+[0;32mI (44958) mqtt_sub: topic: node2/log[0m
+[0;32mI (44958) mqtt_sub: ts_ms: 137741[0m
+[0;32mI (44958) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (44968) mqtt_sub: pump: (missing)[0m
+[0;32mI (44968) mqtt_sub: flooded: (missing)[0m
+[0;32mI (44968) mqtt_sub: water_cm: 2.02[0m
+[0;32mI (44978) mqtt_sub: rx_timestamp_ms: 44466[0m
+[0;32mI (45298) mqtt_sub: MQTT message received[0m
+[0;32mI (45298) mqtt_sub: topic: node2/status[0m
+[0;32mI (45298) mqtt_sub: ts_ms: 137747[0m
+[0;32mI (45298) mqtt_sub: pump: true[0m
+[0;32mI (45298) mqtt_sub: flooded: true[0m
+[0;32mI (45298) mqtt_sub: water_cm: 2.02[0m
+[0;32mI (45308) mqtt_sub: rx_timestamp_ms: 44801[0m
+[0;32mI (45988) mqtt_sub: MQTT message received[0m
+[0;32mI (45988) mqtt_sub: topic: node2/log[0m
+[0;32mI (45988) mqtt_sub: ts_ms: 138751[0m
+[0;32mI (45988) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (45988) mqtt_sub: pump: (missing)[0m
+[0;32mI (45988) mqtt_sub: flooded: (missing)[0m
+[0;32mI (45998) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (45998) mqtt_sub: rx_timestamp_ms: 45490[0m
+[0;32mI (46188) mqtt_sub: MQTT message received[0m
+[0;32mI (46188) mqtt_sub: topic: node2/status[0m
+[0;32mI (46188) mqtt_sub: ts_ms: 138758[0m
+[0;32mI (46188) mqtt_sub: pump: false[0m
+[0;32mI (46188) mqtt_sub: flooded: false[0m
+[0;32mI (46188) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (46198) mqtt_sub: rx_timestamp_ms: 45693[0m
+[0;32mI (47008) mqtt_sub: MQTT message received[0m
+[0;32mI (47008) mqtt_sub: topic: node2/status[0m
+[0;32mI (47008) mqtt_sub: ts_ms: 139761[0m
+[0;32mI (47008) mqtt_sub: pump: false[0m
+[0;32mI (47008) mqtt_sub: flooded: false[0m
+[0;32mI (47018) mqtt_sub: water_cm: 1.91[0m
+[0;32mI (47018) mqtt_sub: rx_timestamp_ms: 46516[0m
+[0;32mI (47938) mqtt_sub: MQTT message received[0m
+[0;32mI (47938) mqtt_sub: topic: node2/status[0m
+[0;32mI (47938) mqtt_sub: ts_ms: 140761[0m
+[0;32mI (47938) mqtt_sub: pump: false[0m
+[0;32mI (47938) mqtt_sub: flooded: false[0m
+[0;32mI (47948) mqtt_sub: water_cm: 0.64[0m
+[0;32mI (47948) mqtt_sub: rx_timestamp_ms: 47445[0m
+[0;32mI (48958) mqtt_sub: MQTT message received[0m
+[0;32mI (48958) mqtt_sub: topic: node2/status[0m
+[0;32mI (48958) mqtt_sub: ts_ms: 141761[0m
+[0;32mI (48958) mqtt_sub: pump: false[0m
+[0;32mI (48958) mqtt_sub: flooded: false[0m
+[0;32mI (48968) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (48968) mqtt_sub: rx_timestamp_ms: 48466[0m
+[0;32mI (49998) mqtt_sub: MQTT message received[0m
+[0;32mI (49998) mqtt_sub: topic: node2/status[0m
+[0;32mI (49998) mqtt_sub: ts_ms: 142761[0m
+[0;32mI (49998) mqtt_sub: pump: false[0m
+[0;32mI (49998) mqtt_sub: flooded: false[0m
+[0;32mI (49998) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (50008) mqtt_sub: rx_timestamp_ms: 49503[0m
+[0;32mI (50998) mqtt_sub: MQTT message received[0m
+[0;32mI (50998) mqtt_sub: topic: node2/status[0m
+[0;32mI (50998) mqtt_sub: ts_ms: 143761[0m
+[0;32mI (50998) mqtt_sub: pump: false[0m
+[0;32mI (50998) mqtt_sub: flooded: false[0m
+[0;32mI (51008) mqtt_sub: water_cm: 0.52[0m
+[0;32mI (51008) mqtt_sub: rx_timestamp_ms: 50505[0m
+[0;32mI (51918) mqtt_sub: MQTT message received[0m
+[0;32mI (51928) mqtt_sub: topic: node2/status[0m
+[0;32mI (51928) mqtt_sub: ts_ms: 144761[0m
+[0;32mI (51928) mqtt_sub: pump: false[0m
+[0;32mI (51928) mqtt_sub: flooded: false[0m
+[0;32mI (51928) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (51928) mqtt_sub: rx_timestamp_ms: 51429[0m
+[0;32mI (52948) mqtt_sub: MQTT message received[0m
+[0;32mI (52948) mqtt_sub: topic: node2/status[0m
+[0;32mI (52948) mqtt_sub: ts_ms: 145761[0m
+[0;32mI (52948) mqtt_sub: pump: false[0m
+[0;32mI (52948) mqtt_sub: flooded: false[0m
+[0;32mI (52948) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (52958) mqtt_sub: rx_timestamp_ms: 52452[0m
+[0;32mI (53978) mqtt_sub: MQTT message received[0m
+[0;32mI (53978) mqtt_sub: topic: node2/status[0m
+[0;32mI (53978) mqtt_sub: ts_ms: 146761[0m
+[0;32mI (53978) mqtt_sub: pump: false[0m
+[0;32mI (53978) mqtt_sub: flooded: false[0m
+[0;32mI (53978) mqtt_sub: water_cm: 0.95[0m
+[0;32mI (53978) mqtt_sub: rx_timestamp_ms: 53480[0m
+[0;32mI (55018) mqtt_sub: MQTT message received[0m
+[0;32mI (55018) mqtt_sub: topic: node2/status[0m
+[0;32mI (55018) mqtt_sub: ts_ms: 147761[0m
+[0;32mI (55018) mqtt_sub: pump: false[0m
+[0;32mI (55018) mqtt_sub: flooded: false[0m
+[0;32mI (55018) mqtt_sub: water_cm: 1.28[0m
+[0;32mI (55028) mqtt_sub: rx_timestamp_ms: 54523[0m
+[0;32mI (55958) mqtt_sub: MQTT message received[0m
+[0;32mI (55958) mqtt_sub: topic: node2/status[0m
+[0;32mI (55958) mqtt_sub: ts_ms: 148761[0m
+[0;32mI (55958) mqtt_sub: pump: false[0m
+[0;32mI (55958) mqtt_sub: flooded: false[0m
+[0;32mI (55958) mqtt_sub: water_cm: 1.83[0m
+[0;32mI (55958) mqtt_sub: rx_timestamp_ms: 55460[0m
+[0;32mI (56948) mqtt_sub: MQTT message received[0m
+[0;32mI (56948) mqtt_sub: topic: node2/log[0m
+[0;32mI (56948) mqtt_sub: ts_ms: 149761[0m
+[0;32mI (56948) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (56948) mqtt_sub: pump: (missing)[0m
+[0;32mI (56958) mqtt_sub: flooded: (missing)[0m
+[0;32mI (56958) mqtt_sub: water_cm: 2.07[0m
+[0;32mI (56958) mqtt_sub: rx_timestamp_ms: 56456[0m
+[0;32mI (57248) mqtt_sub: MQTT message received[0m
+[0;32mI (57248) mqtt_sub: topic: node2/status[0m
+[0;32mI (57248) mqtt_sub: ts_ms: 149767[0m
+[0;32mI (57248) mqtt_sub: pump: true[0m
+[0;32mI (57248) mqtt_sub: flooded: true[0m
+[0;32mI (57258) mqtt_sub: water_cm: 2.07[0m
+[0;32mI (57258) mqtt_sub: rx_timestamp_ms: 56755[0m
+[0;32mI (57978) mqtt_sub: MQTT message received[0m
+[0;32mI (57978) mqtt_sub: topic: node2/log[0m
+[0;32mI (57978) mqtt_sub: ts_ms: 150771[0m
+[0;32mI (57978) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (57988) mqtt_sub: pump: (missing)[0m
+[0;32mI (57988) mqtt_sub: flooded: (missing)[0m
+[0;32mI (57988) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (57998) mqtt_sub: rx_timestamp_ms: 57487[0m
+[0;32mI (58388) mqtt_sub: MQTT message received[0m
+[0;32mI (58388) mqtt_sub: topic: node2/status[0m
+[0;32mI (58398) mqtt_sub: ts_ms: 150777[0m
+[0;32mI (58398) mqtt_sub: pump: false[0m
+[0;32mI (58398) mqtt_sub: flooded: false[0m
+[0;32mI (58398) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (58398) mqtt_sub: rx_timestamp_ms: 57898[0m
+[0;32mI (59188) mqtt_sub: MQTT message received[0m
+[0;32mI (59188) mqtt_sub: topic: node2/log[0m
+[0;32mI (59188) mqtt_sub: ts_ms: 151781[0m
+[0;32mI (59188) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (59188) mqtt_sub: pump: (missing)[0m
+[0;32mI (59198) mqtt_sub: flooded: (missing)[0m
+[0;32mI (59198) mqtt_sub: water_cm: 2.69[0m
+[0;32mI (59198) mqtt_sub: rx_timestamp_ms: 58693[0m
+[0;32mI (59608) mqtt_sub: MQTT message received[0m
+[0;32mI (59608) mqtt_sub: topic: node2/status[0m
+[0;32mI (59608) mqtt_sub: ts_ms: 151787[0m
+[0;32mI (59608) mqtt_sub: pump: true[0m
+[0;32mI (59618) mqtt_sub: flooded: true[0m
+[0;32mI (59618) mqtt_sub: water_cm: 2.69[0m
+[0;32mI (59618) mqtt_sub: rx_timestamp_ms: 59117[0m
+[0;32mI (60038) mqtt_sub: MQTT message received[0m
+[0;32mI (60038) mqtt_sub: topic: node2/log[0m
+[0;32mI (60038) mqtt_sub: ts_ms: 152791[0m
+[0;32mI (60038) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (60038) mqtt_sub: pump: (missing)[0m
+[0;32mI (60048) mqtt_sub: flooded: (missing)[0m
+[0;32mI (60048) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (60048) mqtt_sub: rx_timestamp_ms: 59543[0m
+[0;32mI (60278) mqtt_sub: MQTT message received[0m
+[0;32mI (60288) mqtt_sub: topic: node2/status[0m
+[0;32mI (60288) mqtt_sub: ts_ms: 152796[0m
+[0;32mI (60288) mqtt_sub: pump: false[0m
+[0;32mI (60288) mqtt_sub: flooded: false[0m
+[0;32mI (60288) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (60288) mqtt_sub: rx_timestamp_ms: 59789[0m
+[0;32mI (61038) mqtt_sub: MQTT message received[0m
+[0;32mI (61038) mqtt_sub: topic: node2/status[0m
+[0;32mI (61038) mqtt_sub: ts_ms: 153791[0m
+[0;32mI (61038) mqtt_sub: pump: false[0m
+[0;32mI (61038) mqtt_sub: flooded: false[0m
+[0;32mI (61038) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (61048) mqtt_sub: rx_timestamp_ms: 60542[0m
+[0;32mI (61958) mqtt_sub: MQTT message received[0m
+[0;32mI (61958) mqtt_sub: topic: node2/status[0m
+[0;32mI (61958) mqtt_sub: ts_ms: 154791[0m
+[0;32mI (61958) mqtt_sub: pump: false[0m
+[0;32mI (61958) mqtt_sub: flooded: false[0m
+[0;32mI (61968) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (61968) mqtt_sub: rx_timestamp_ms: 61466[0m
+[0;32mI (63008) mqtt_sub: MQTT message received[0m
+[0;32mI (63008) mqtt_sub: topic: node2/status[0m
+[0;32mI (63008) mqtt_sub: ts_ms: 155791[0m
+[0;32mI (63008) mqtt_sub: pump: false[0m
+[0;32mI (63008) mqtt_sub: flooded: false[0m
+[0;32mI (63018) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (63018) mqtt_sub: rx_timestamp_ms: 62516[0m
+[0;32mI (64008) mqtt_sub: MQTT message received[0m
+[0;32mI (64008) mqtt_sub: topic: node2/status[0m
+[0;32mI (64008) mqtt_sub: ts_ms: 156791[0m
+[0;32mI (64008) mqtt_sub: pump: false[0m
+[0;32mI (64008) mqtt_sub: flooded: false[0m
+[0;32mI (64018) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (64018) mqtt_sub: rx_timestamp_ms: 63516[0m
+[0;32mI (65028) mqtt_sub: MQTT message received[0m
+[0;32mI (65028) mqtt_sub: topic: node2/status[0m
+[0;32mI (65028) mqtt_sub: ts_ms: 157791[0m
+[0;32mI (65028) mqtt_sub: pump: false[0m
+[0;32mI (65028) mqtt_sub: flooded: false[0m
+[0;32mI (65038) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (65038) mqtt_sub: rx_timestamp_ms: 64536[0m
+[0;32mI (65968) mqtt_sub: MQTT message received[0m
+[0;32mI (65968) mqtt_sub: topic: node2/status[0m
+[0;32mI (65978) mqtt_sub: ts_ms: 158791[0m
+[0;32mI (65978) mqtt_sub: pump: false[0m
+[0;32mI (65978) mqtt_sub: flooded: false[0m
+[0;32mI (65978) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (65978) mqtt_sub: rx_timestamp_ms: 65478[0m
+[0;32mI (66968) mqtt_sub: MQTT message received[0m
+[0;32mI (66968) mqtt_sub: topic: node2/status[0m
+[0;32mI (66978) mqtt_sub: ts_ms: 159791[0m
+[0;32mI (66978) mqtt_sub: pump: false[0m
+[0;32mI (66978) mqtt_sub: flooded: false[0m
+[0;32mI (66978) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (66978) mqtt_sub: rx_timestamp_ms: 66478[0m
+[0;32mI (67998) mqtt_sub: MQTT message received[0m
+[0;32mI (67998) mqtt_sub: topic: node2/status[0m
+[0;32mI (67998) mqtt_sub: ts_ms: 160791[0m
+[0;32mI (67998) mqtt_sub: pump: false[0m
+[0;32mI (67998) mqtt_sub: flooded: false[0m
+[0;32mI (67998) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (68008) mqtt_sub: rx_timestamp_ms: 67502[0m
+[0;32mI (69018) mqtt_sub: MQTT message received[0m
+[0;32mI (69018) mqtt_sub: topic: node2/status[0m
+[0;32mI (69018) mqtt_sub: ts_ms: 161791[0m
+[0;32mI (69018) mqtt_sub: pump: false[0m
+[0;32mI (69018) mqtt_sub: flooded: false[0m
+[0;32mI (69018) mqtt_sub: water_cm: 0.56[0m
+[0;32mI (69028) mqtt_sub: rx_timestamp_ms: 68523[0m
+[0;32mI (69968) mqtt_sub: MQTT message received[0m
+[0;32mI (69968) mqtt_sub: topic: node2/status[0m
+[0;32mI (69968) mqtt_sub: ts_ms: 162791[0m
+[0;32mI (69968) mqtt_sub: pump: false[0m
+[0;32mI (69968) mqtt_sub: flooded: false[0m
+[0;32mI (69968) mqtt_sub: water_cm: 0.51[0m
+[0;32mI (69978) mqtt_sub: rx_timestamp_ms: 69472[0m
+[0;32mI (70988) mqtt_sub: MQTT message received[0m
+[0;32mI (70988) mqtt_sub: topic: node2/status[0m
+[0;32mI (70988) mqtt_sub: ts_ms: 163791[0m
+[0;32mI (70988) mqtt_sub: pump: false[0m
+[0;32mI (70988) mqtt_sub: flooded: false[0m
+[0;32mI (70988) mqtt_sub: water_cm: 0.58[0m
+[0;32mI (70998) mqtt_sub: rx_timestamp_ms: 70493[0m
+[0;32mI (72018) mqtt_sub: MQTT message received[0m
+[0;32mI (72018) mqtt_sub: topic: node2/status[0m
+[0;32mI (72018) mqtt_sub: ts_ms: 164791[0m
+[0;32mI (72018) mqtt_sub: pump: false[0m
+[0;32mI (72018) mqtt_sub: flooded: false[0m
+[0;32mI (72028) mqtt_sub: water_cm: 1.18[0m
+[0;32mI (72028) mqtt_sub: rx_timestamp_ms: 71525[0m
+[0;32mI (73018) mqtt_sub: MQTT message received[0m
+[0;32mI (73018) mqtt_sub: topic: node2/log[0m
+[0;32mI (73018) mqtt_sub: ts_ms: 165791[0m
+[0;32mI (73018) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (73018) mqtt_sub: pump: (missing)[0m
+[0;32mI (73028) mqtt_sub: flooded: (missing)[0m
+[0;32mI (73028) mqtt_sub: water_cm: 2.69[0m
+[0;32mI (73028) mqtt_sub: rx_timestamp_ms: 72525[0m
+[0;32mI (73298) mqtt_sub: MQTT message received[0m
+[0;32mI (73298) mqtt_sub: topic: node2/status[0m
+[0;32mI (73298) mqtt_sub: ts_ms: 165797[0m
+[0;32mI (73298) mqtt_sub: pump: true[0m
+[0;32mI (73298) mqtt_sub: flooded: true[0m
+[0;32mI (73308) mqtt_sub: water_cm: 2.69[0m
+[0;32mI (73308) mqtt_sub: rx_timestamp_ms: 72805[0m
+[0;32mI (74038) mqtt_sub: MQTT message received[0m
+[0;32mI (74048) mqtt_sub: topic: node2/log[0m
+[0;32mI (74048) mqtt_sub: ts_ms: 166801[0m
+[0;32mI (74048) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (74048) mqtt_sub: pump: (missing)[0m
+[0;32mI (74048) mqtt_sub: flooded: (missing)[0m
+[0;32mI (74048) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (74058) mqtt_sub: rx_timestamp_ms: 73549[0m
+[0;32mI (74268) mqtt_sub: MQTT message received[0m
+[0;32mI (74278) mqtt_sub: topic: node2/status[0m
+[0;32mI (74278) mqtt_sub: ts_ms: 166807[0m
+[0;32mI (74278) mqtt_sub: pump: false[0m
+[0;32mI (74278) mqtt_sub: flooded: false[0m
+[0;32mI (74278) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (74278) mqtt_sub: rx_timestamp_ms: 73779[0m
+[0;32mI (74958) mqtt_sub: MQTT message received[0m
+[0;32mI (74958) mqtt_sub: topic: node2/log[0m
+[0;32mI (74968) mqtt_sub: ts_ms: 167811[0m
+[0;32mI (74968) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (74968) mqtt_sub: pump: (missing)[0m
+[0;32mI (74968) mqtt_sub: flooded: (missing)[0m
+[0;32mI (74968) mqtt_sub: water_cm: 2.43[0m
+[0;32mI (74978) mqtt_sub: rx_timestamp_ms: 74468[0m
+[0;32mI (75368) mqtt_sub: MQTT message received[0m
+[0;32mI (75368) mqtt_sub: topic: node2/status[0m
+[0;32mI (75368) mqtt_sub: ts_ms: 167818[0m
+[0;32mI (75368) mqtt_sub: pump: true[0m
+[0;32mI (75368) mqtt_sub: flooded: true[0m
+[0;32mI (75378) mqtt_sub: water_cm: 2.43[0m
+[0;32mI (75378) mqtt_sub: rx_timestamp_ms: 74875[0m
+[0;32mI (75978) mqtt_sub: MQTT message received[0m
+[0;32mI (75978) mqtt_sub: topic: node2/log[0m
+[0;32mI (75988) mqtt_sub: ts_ms: 168821[0m
+[0;32mI (75988) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (75988) mqtt_sub: pump: (missing)[0m
+[0;32mI (75988) mqtt_sub: flooded: (missing)[0m
+[0;32mI (75988) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (75998) mqtt_sub: rx_timestamp_ms: 75488[0m
+[0;32mI (76298) mqtt_sub: MQTT message received[0m
+[0;32mI (76298) mqtt_sub: topic: node2/status[0m
+[0;32mI (76298) mqtt_sub: ts_ms: 168827[0m
+[0;32mI (76308) mqtt_sub: pump: false[0m
+[0;32mI (76308) mqtt_sub: flooded: false[0m
+[0;32mI (76308) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (76308) mqtt_sub: rx_timestamp_ms: 75808[0m
+[0;32mI (77018) mqtt_sub: MQTT message received[0m
+[0;32mI (77018) mqtt_sub: topic: node2/status[0m
+[0;32mI (77018) mqtt_sub: ts_ms: 169831[0m
+[0;32mI (77018) mqtt_sub: pump: false[0m
+[0;32mI (77018) mqtt_sub: flooded: false[0m
+[0;32mI (77018) mqtt_sub: water_cm: 1.39[0m
+[0;32mI (77018) mqtt_sub: rx_timestamp_ms: 76520[0m
+[0;32mI (78038) mqtt_sub: MQTT message received[0m
+[0;32mI (78038) mqtt_sub: topic: node2/status[0m
+[0;32mI (78038) mqtt_sub: ts_ms: 170831[0m
+[0;32mI (78038) mqtt_sub: pump: false[0m
+[0;32mI (78048) mqtt_sub: flooded: false[0m
+[0;32mI (78048) mqtt_sub: water_cm: 0.79[0m
+[0;32mI (78048) mqtt_sub: rx_timestamp_ms: 77547[0m
+[0;32mI (79058) mqtt_sub: MQTT message received[0m
+[0;32mI (79058) mqtt_sub: topic: node2/status[0m
+[0;32mI (79058) mqtt_sub: ts_ms: 171831[0m
+[0;32mI (79058) mqtt_sub: pump: false[0m
+[0;32mI (79058) mqtt_sub: flooded: false[0m
+[0;32mI (79068) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (79068) mqtt_sub: rx_timestamp_ms: 78565[0m
+[0;32mI (80088) mqtt_sub: MQTT message received[0m
+[0;32mI (80088) mqtt_sub: topic: node2/status[0m
+[0;32mI (80088) mqtt_sub: ts_ms: 172831[0m
+[0;32mI (80088) mqtt_sub: pump: false[0m
+[0;32mI (80088) mqtt_sub: flooded: false[0m
+[0;32mI (80088) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (80098) mqtt_sub: rx_timestamp_ms: 79592[0m
+[0;32mI (80998) mqtt_sub: MQTT message received[0m
+[0;32mI (80998) mqtt_sub: topic: node2/status[0m
+[0;32mI (80998) mqtt_sub: ts_ms: 173831[0m
+[0;32mI (80998) mqtt_sub: pump: false[0m
+[0;32mI (81008) mqtt_sub: flooded: false[0m
+[0;32mI (81008) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (81008) mqtt_sub: rx_timestamp_ms: 80507[0m
+[0;32mI (82028) mqtt_sub: MQTT message received[0m
+[0;32mI (82028) mqtt_sub: topic: node2/status[0m
+[0;32mI (82028) mqtt_sub: ts_ms: 174831[0m
+[0;32mI (82028) mqtt_sub: pump: false[0m
+[0;32mI (82038) mqtt_sub: flooded: false[0m
+[0;32mI (82038) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (82038) mqtt_sub: rx_timestamp_ms: 81537[0m
+[0;32mI (83048) mqtt_sub: MQTT message received[0m
+[0;32mI (83048) mqtt_sub: topic: node2/status[0m
+[0;32mI (83058) mqtt_sub: ts_ms: 175831[0m
+[0;32mI (83058) mqtt_sub: pump: false[0m
+[0;32mI (83058) mqtt_sub: flooded: false[0m
+[0;32mI (83058) mqtt_sub: water_cm: 0.60[0m
+[0;32mI (83058) mqtt_sub: rx_timestamp_ms: 82558[0m
+[0;32mI (84078) mqtt_sub: MQTT message received[0m
+[0;32mI (84078) mqtt_sub: topic: node2/status[0m
+[0;32mI (84078) mqtt_sub: ts_ms: 176831[0m
+[0;32mI (84078) mqtt_sub: pump: false[0m
+[0;32mI (84078) mqtt_sub: flooded: false[0m
+[0;32mI (84078) mqtt_sub: water_cm: 1.46[0m
+[0;32mI (84088) mqtt_sub: rx_timestamp_ms: 83583[0m
+[0;32mI (85118) mqtt_sub: MQTT message received[0m
+[0;32mI (85118) mqtt_sub: topic: node2/log[0m
+[0;32mI (85118) mqtt_sub: ts_ms: 177831[0m
+[0;32mI (85118) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (85118) mqtt_sub: pump: (missing)[0m
+[0;32mI (85128) mqtt_sub: flooded: (missing)[0m
+[0;32mI (85128) mqtt_sub: water_cm: 2.73[0m
+[0;32mI (85128) mqtt_sub: rx_timestamp_ms: 84624[0m
+[0;32mI (85298) mqtt_sub: MQTT message received[0m
+[0;32mI (85298) mqtt_sub: topic: node2/status[0m
+[0;32mI (85298) mqtt_sub: ts_ms: 177837[0m
+[0;32mI (85298) mqtt_sub: pump: true[0m
+[0;32mI (85308) mqtt_sub: flooded: true[0m
+[0;32mI (85308) mqtt_sub: water_cm: 2.73[0m
+[0;32mI (85308) mqtt_sub: rx_timestamp_ms: 84807[0m
+[0;32mI (86018) mqtt_sub: MQTT message received[0m
+[0;32mI (86018) mqtt_sub: topic: node2/log[0m
+[0;32mI (86018) mqtt_sub: ts_ms: 178841[0m
+[0;32mI (86018) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (86018) mqtt_sub: pump: (missing)[0m
+[0;32mI (86028) mqtt_sub: flooded: (missing)[0m
+[0;32mI (86028) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (86028) mqtt_sub: rx_timestamp_ms: 85524[0m
+[0;32mI (86268) mqtt_sub: MQTT message received[0m
+[0;32mI (86268) mqtt_sub: topic: node2/status[0m
+[0;32mI (86278) mqtt_sub: ts_ms: 178847[0m
+[0;32mI (86278) mqtt_sub: pump: false[0m
+[0;32mI (86278) mqtt_sub: flooded: false[0m
+[0;32mI (86278) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (86278) mqtt_sub: rx_timestamp_ms: 85778[0m
+[0;32mI (87038) mqtt_sub: MQTT message received[0m
+[0;32mI (87038) mqtt_sub: topic: node2/status[0m
+[0;32mI (87048) mqtt_sub: ts_ms: 179851[0m
+[0;32mI (87048) mqtt_sub: pump: false[0m
+[0;32mI (87048) mqtt_sub: flooded: false[0m
+[0;32mI (87048) mqtt_sub: water_cm: 1.19[0m
+[0;32mI (87048) mqtt_sub: rx_timestamp_ms: 86548[0m
+[0;32mI (88068) mqtt_sub: MQTT message received[0m
+[0;32mI (88068) mqtt_sub: topic: node2/status[0m
+[0;32mI (88068) mqtt_sub: ts_ms: 180851[0m
+[0;32mI (88068) mqtt_sub: pump: false[0m
+[0;32mI (88068) mqtt_sub: flooded: false[0m
+[0;32mI (88078) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (88078) mqtt_sub: rx_timestamp_ms: 87576[0m
+[0;32mI (89098) mqtt_sub: MQTT message received[0m
+[0;32mI (89098) mqtt_sub: topic: node2/status[0m
+[0;32mI (89098) mqtt_sub: ts_ms: 181852[0m
+[0;32mI (89098) mqtt_sub: pump: false[0m
+[0;32mI (89098) mqtt_sub: flooded: false[0m
+[0;32mI (89098) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (89098) mqtt_sub: rx_timestamp_ms: 88600[0m
+[0;32mI (90018) mqtt_sub: MQTT message received[0m
+[0;32mI (90018) mqtt_sub: topic: node2/status[0m
+[0;32mI (90018) mqtt_sub: ts_ms: 182851[0m
+[0;32mI (90018) mqtt_sub: pump: false[0m
+[0;32mI (90018) mqtt_sub: flooded: false[0m
+[0;32mI (90028) mqtt_sub: water_cm: 0.51[0m
+[0;32mI (90028) mqtt_sub: rx_timestamp_ms: 89524[0m
+[0;32mI (91068) mqtt_sub: MQTT message received[0m
+[0;32mI (91068) mqtt_sub: topic: node2/status[0m
+[0;32mI (91068) mqtt_sub: ts_ms: 183851[0m
+[0;32mI (91068) mqtt_sub: pump: false[0m
+[0;32mI (91068) mqtt_sub: flooded: false[0m
+[0;32mI (91068) mqtt_sub: water_cm: 0.51[0m
+[0;32mI (91068) mqtt_sub: rx_timestamp_ms: 90569[0m
+[0;32mI (92058) mqtt_sub: MQTT message received[0m
+[0;32mI (92058) mqtt_sub: topic: node2/status[0m
+[0;32mI (92058) mqtt_sub: ts_ms: 184851[0m
+[0;32mI (92058) mqtt_sub: pump: false[0m
+[0;32mI (92068) mqtt_sub: flooded: false[0m
+[0;32mI (92068) mqtt_sub: water_cm: 1.06[0m
+[0;32mI (92068) mqtt_sub: rx_timestamp_ms: 91567[0m
+[0;32mI (93098) mqtt_sub: MQTT message received[0m
+[0;32mI (93098) mqtt_sub: topic: node2/log[0m
+[0;32mI (93098) mqtt_sub: ts_ms: 185851[0m
+[0;32mI (93098) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (93098) mqtt_sub: pump: (missing)[0m
+[0;32mI (93098) mqtt_sub: flooded: (missing)[0m
+[0;32mI (93108) mqtt_sub: water_cm: 2.76[0m
+[0;32mI (93108) mqtt_sub: rx_timestamp_ms: 92601[0m
+[0;32mI (93288) mqtt_sub: MQTT message received[0m
+[0;32mI (93288) mqtt_sub: topic: node2/status[0m
+[0;32mI (93288) mqtt_sub: ts_ms: 185857[0m
+[0;32mI (93288) mqtt_sub: pump: true[0m
+[0;32mI (93288) mqtt_sub: flooded: true[0m
+[0;32mI (93288) mqtt_sub: water_cm: 2.76[0m
+[0;32mI (93298) mqtt_sub: rx_timestamp_ms: 92793[0m
+[0;32mI (94008) mqtt_sub: MQTT message received[0m
+[0;32mI (94008) mqtt_sub: topic: node2/log[0m
+[0;32mI (94008) mqtt_sub: ts_ms: 186861[0m
+[0;32mI (94008) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (94018) mqtt_sub: pump: (missing)[0m
+[0;32mI (94018) mqtt_sub: flooded: (missing)[0m
+[0;32mI (94018) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (94028) mqtt_sub: rx_timestamp_ms: 93516[0m
+[0;32mI (94338) mqtt_sub: MQTT message received[0m
+[0;32mI (94338) mqtt_sub: topic: node2/status[0m
+[0;32mI (94338) mqtt_sub: ts_ms: 186869[0m
+[0;32mI (94338) mqtt_sub: pump: false[0m
+[0;32mI (94338) mqtt_sub: flooded: false[0m
+[0;32mI (94338) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (94348) mqtt_sub: rx_timestamp_ms: 93842[0m
+[0;32mI (95038) mqtt_sub: MQTT message received[0m
+[0;32mI (95038) mqtt_sub: topic: node2/status[0m
+[0;32mI (95038) mqtt_sub: ts_ms: 187871[0m
+[0;32mI (95038) mqtt_sub: pump: false[0m
+[0;32mI (95038) mqtt_sub: flooded: false[0m
+[0;32mI (95038) mqtt_sub: water_cm: 1.31[0m
+[0;32mI (95038) mqtt_sub: rx_timestamp_ms: 94540[0m
+[0;32mI (96058) mqtt_sub: MQTT message received[0m
+[0;32mI (96058) mqtt_sub: topic: node2/status[0m
+[0;32mI (96058) mqtt_sub: ts_ms: 188871[0m
+[0;32mI (96058) mqtt_sub: pump: false[0m
+[0;32mI (96058) mqtt_sub: flooded: false[0m
+[0;32mI (96058) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (96068) mqtt_sub: rx_timestamp_ms: 95563[0m
+[0;32mI (97078) mqtt_sub: MQTT message received[0m
+[0;32mI (97078) mqtt_sub: topic: node2/status[0m
+[0;32mI (97078) mqtt_sub: ts_ms: 189871[0m
+[0;32mI (97078) mqtt_sub: pump: false[0m
+[0;32mI (97078) mqtt_sub: flooded: false[0m
+[0;32mI (97078) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (97088) mqtt_sub: rx_timestamp_ms: 96583[0m
+[0;32mI (98098) mqtt_sub: MQTT message received[0m
+[0;32mI (98098) mqtt_sub: topic: node2/status[0m
+[0;32mI (98098) mqtt_sub: ts_ms: 190871[0m
+[0;32mI (98098) mqtt_sub: pump: false[0m
+[0;32mI (98108) mqtt_sub: flooded: false[0m
+[0;32mI (98108) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (98108) mqtt_sub: rx_timestamp_ms: 97607[0m
+[0;32mI (99028) mqtt_sub: MQTT message received[0m
+[0;32mI (99028) mqtt_sub: topic: node2/status[0m
+[0;32mI (99028) mqtt_sub: ts_ms: 191871[0m
+[0;32mI (99028) mqtt_sub: pump: false[0m
+[0;32mI (99028) mqtt_sub: flooded: false[0m
+[0;32mI (99028) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (99038) mqtt_sub: rx_timestamp_ms: 98532[0m
+[0;32mI (100048) mqtt_sub: MQTT message received[0m
+[0;32mI (100048) mqtt_sub: topic: node2/status[0m
+[0;32mI (100048) mqtt_sub: ts_ms: 192871[0m
+[0;32mI (100048) mqtt_sub: pump: false[0m
+[0;32mI (100048) mqtt_sub: flooded: false[0m
+[0;32mI (100058) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (100058) mqtt_sub: rx_timestamp_ms: 99556[0m
+[0;32mI (101078) mqtt_sub: MQTT message received[0m
+[0;32mI (101078) mqtt_sub: topic: node2/status[0m
+[0;32mI (101078) mqtt_sub: ts_ms: 193871[0m
+[0;32mI (101078) mqtt_sub: pump: false[0m
+[0;32mI (101078) mqtt_sub: flooded: false[0m
+[0;32mI (101078) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (101088) mqtt_sub: rx_timestamp_ms: 100582[0m
+[0;32mI (102098) mqtt_sub: MQTT message received[0m
+[0;32mI (102098) mqtt_sub: topic: node2/status[0m
+[0;32mI (102098) mqtt_sub: ts_ms: 194871[0m
+[0;32mI (102098) mqtt_sub: pump: false[0m
+[0;32mI (102098) mqtt_sub: flooded: false[0m
+[0;32mI (102108) mqtt_sub: water_cm: 0.64[0m
+[0;32mI (102108) mqtt_sub: rx_timestamp_ms: 101604[0m
+[0;32mI (103018) mqtt_sub: MQTT message received[0m
+[0;32mI (103018) mqtt_sub: topic: node2/status[0m
+[0;32mI (103018) mqtt_sub: ts_ms: 195871[0m
+[0;32mI (103018) mqtt_sub: pump: false[0m
+[0;32mI (103018) mqtt_sub: flooded: false[0m
+[0;32mI (103028) mqtt_sub: water_cm: 0.74[0m
+[0;32mI (103028) mqtt_sub: rx_timestamp_ms: 102524[0m
+[0;32mI (104048) mqtt_sub: MQTT message received[0m
+[0;32mI (104048) mqtt_sub: topic: node2/status[0m
+[0;32mI (104048) mqtt_sub: ts_ms: 196871[0m
+[0;32mI (104048) mqtt_sub: pump: false[0m
+[0;32mI (104048) mqtt_sub: flooded: false[0m
+[0;32mI (104048) mqtt_sub: water_cm: 1.23[0m
+[0;32mI (104058) mqtt_sub: rx_timestamp_ms: 103550[0m
+[0;32mI (105098) mqtt_sub: MQTT message received[0m
+[0;32mI (105098) mqtt_sub: topic: node2/status[0m
+[0;32mI (105098) mqtt_sub: ts_ms: 197871[0m
+[0;32mI (105098) mqtt_sub: pump: false[0m
+[0;32mI (105098) mqtt_sub: flooded: false[0m
+[0;32mI (105108) mqtt_sub: water_cm: 1.85[0m
+[0;32mI (105108) mqtt_sub: rx_timestamp_ms: 104605[0m
+[0;32mI (106088) mqtt_sub: MQTT message received[0m
+[0;32mI (106088) mqtt_sub: topic: node2/log[0m
+[0;32mI (106088) mqtt_sub: ts_ms: 198871[0m
+[0;32mI (106088) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (106098) mqtt_sub: pump: (missing)[0m
+[0;32mI (106098) mqtt_sub: flooded: (missing)[0m
+[0;32mI (106098) mqtt_sub: water_cm: 2.44[0m
+[0;32mI (106108) mqtt_sub: rx_timestamp_ms: 105597[0m
+[0;32mI (106288) mqtt_sub: MQTT message received[0m
+[0;32mI (106288) mqtt_sub: topic: node2/status[0m
+[0;32mI (106288) mqtt_sub: ts_ms: 198877[0m
+[0;32mI (106288) mqtt_sub: pump: true[0m
+[0;32mI (106298) mqtt_sub: flooded: true[0m
+[0;32mI (106298) mqtt_sub: water_cm: 2.44[0m
+[0;32mI (106298) mqtt_sub: rx_timestamp_ms: 105797[0m
+[0;32mI (107118) mqtt_sub: MQTT message received[0m
+[0;32mI (107118) mqtt_sub: topic: node2/log[0m
+[0;32mI (107118) mqtt_sub: ts_ms: 199881[0m
+[0;32mI (107118) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (107118) mqtt_sub: pump: (missing)[0m
+[0;32mI (107128) mqtt_sub: flooded: (missing)[0m
+[0;32mI (107128) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (107128) mqtt_sub: rx_timestamp_ms: 106623[0m
+[0;32mI (107318) mqtt_sub: MQTT message received[0m
+[0;32mI (107318) mqtt_sub: topic: node2/status[0m
+[0;32mI (107318) mqtt_sub: ts_ms: 199887[0m
+[0;32mI (107318) mqtt_sub: pump: false[0m
+[0;32mI (107318) mqtt_sub: flooded: false[0m
+[0;32mI (107328) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (107328) mqtt_sub: rx_timestamp_ms: 106826[0m
+[0;32mI (108058) mqtt_sub: MQTT message received[0m
+[0;32mI (108058) mqtt_sub: topic: node2/log[0m
+[0;32mI (108058) mqtt_sub: ts_ms: 200893[0m
+[0;32mI (108058) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (108058) mqtt_sub: pump: (missing)[0m
+[0;32mI (108068) mqtt_sub: flooded: (missing)[0m
+[0;32mI (108068) mqtt_sub: water_cm: 2.41[0m
+[0;32mI (108068) mqtt_sub: rx_timestamp_ms: 107563[0m
+[0;32mI (108448) mqtt_sub: MQTT message received[0m
+[0;32mI (108448) mqtt_sub: topic: node2/status[0m
+[0;32mI (108448) mqtt_sub: ts_ms: 200899[0m
+[0;32mI (108448) mqtt_sub: pump: true[0m
+[0;32mI (108448) mqtt_sub: flooded: true[0m
+[0;32mI (108448) mqtt_sub: water_cm: 2.41[0m
+[0;32mI (108458) mqtt_sub: rx_timestamp_ms: 107951[0m
+[0;32mI (109058) mqtt_sub: MQTT message received[0m
+[0;32mI (109058) mqtt_sub: topic: node2/log[0m
+[0;32mI (109058) mqtt_sub: ts_ms: 201901[0m
+[0;32mI (109058) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (109068) mqtt_sub: pump: (missing)[0m
+[0;32mI (109068) mqtt_sub: flooded: (missing)[0m
+[0;32mI (109068) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (109078) mqtt_sub: rx_timestamp_ms: 108567[0m
+[0;32mI (109288) mqtt_sub: MQTT message received[0m
+[0;32mI (109288) mqtt_sub: topic: node2/status[0m
+[0;32mI (109288) mqtt_sub: ts_ms: 201907[0m
+[0;32mI (109288) mqtt_sub: pump: false[0m
+[0;32mI (109288) mqtt_sub: flooded: false[0m
+[0;32mI (109288) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (109288) mqtt_sub: rx_timestamp_ms: 108790[0m
+[0;32mI (110088) mqtt_sub: MQTT message received[0m
+[0;32mI (110088) mqtt_sub: topic: node2/log[0m
+[0;32mI (110088) mqtt_sub: ts_ms: 202911[0m
+[0;32mI (110088) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (110088) mqtt_sub: pump: (missing)[0m
+[0;32mI (110088) mqtt_sub: flooded: (missing)[0m
+[0;32mI (110098) mqtt_sub: water_cm: 2.41[0m
+[0;32mI (110098) mqtt_sub: rx_timestamp_ms: 109592[0m
+[0;32mI (110278) mqtt_sub: MQTT message received[0m
+[0;32mI (110288) mqtt_sub: topic: node2/status[0m
+[0;32mI (110288) mqtt_sub: ts_ms: 202917[0m
+[0;32mI (110288) mqtt_sub: pump: true[0m
+[0;32mI (110288) mqtt_sub: flooded: true[0m
+[0;32mI (110288) mqtt_sub: water_cm: 2.41[0m
+[0;32mI (110288) mqtt_sub: rx_timestamp_ms: 109789[0m
+[0;32mI (111128) mqtt_sub: MQTT message received[0m
+[0;32mI (111128) mqtt_sub: topic: node2/log[0m
+[0;32mI (111128) mqtt_sub: ts_ms: 203921[0m
+[0;32mI (111128) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (111138) mqtt_sub: pump: (missing)[0m
+[0;32mI (111138) mqtt_sub: flooded: (missing)[0m
+[0;32mI (111138) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (111148) mqtt_sub: rx_timestamp_ms: 110638[0m
+[0;32mI (111518) mqtt_sub: MQTT message received[0m
+[0;32mI (111518) mqtt_sub: topic: node2/status[0m
+[0;32mI (111518) mqtt_sub: ts_ms: 203927[0m
+[0;32mI (111518) mqtt_sub: pump: false[0m
+[0;32mI (111528) mqtt_sub: flooded: false[0m
+[0;32mI (111528) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (111528) mqtt_sub: rx_timestamp_ms: 111027[0m
+[0;32mI (112138) mqtt_sub: MQTT message received[0m
+[0;32mI (112138) mqtt_sub: topic: node2/status[0m
+[0;32mI (112138) mqtt_sub: ts_ms: 204931[0m
+[0;32mI (112138) mqtt_sub: pump: false[0m
+[0;32mI (112138) mqtt_sub: flooded: false[0m
+[0;32mI (112138) mqtt_sub: water_cm: 1.36[0m
+[0;32mI (112148) mqtt_sub: rx_timestamp_ms: 111643[0m
+[0;32mI (113158) mqtt_sub: MQTT message received[0m
+[0;32mI (113158) mqtt_sub: topic: node2/status[0m
+[0;32mI (113158) mqtt_sub: ts_ms: 205931[0m
+[0;32mI (113158) mqtt_sub: pump: false[0m
+[0;32mI (113158) mqtt_sub: flooded: false[0m
+[0;32mI (113168) mqtt_sub: water_cm: 0.71[0m
+[0;32mI (113168) mqtt_sub: rx_timestamp_ms: 112665[0m
+[0;32mI (114088) mqtt_sub: MQTT message received[0m
+[0;32mI (114088) mqtt_sub: topic: node2/status[0m
+[0;32mI (114088) mqtt_sub: ts_ms: 206931[0m
+[0;32mI (114088) mqtt_sub: pump: false[0m
+[0;32mI (114088) mqtt_sub: flooded: false[0m
+[0;32mI (114088) mqtt_sub: water_cm: 0.58[0m
+[0;32mI (114088) mqtt_sub: rx_timestamp_ms: 113590[0m
+[0;32mI (115108) mqtt_sub: MQTT message received[0m
+[0;32mI (115108) mqtt_sub: topic: node2/status[0m
+[0;32mI (115108) mqtt_sub: ts_ms: 207931[0m
+[0;32mI (115108) mqtt_sub: pump: false[0m
+[0;32mI (115108) mqtt_sub: flooded: false[0m
+[0;32mI (115108) mqtt_sub: water_cm: 0.55[0m
+[0;32mI (115118) mqtt_sub: rx_timestamp_ms: 114611[0m
+[0;32mI (116138) mqtt_sub: MQTT message received[0m
+[0;32mI (116138) mqtt_sub: topic: node2/status[0m
+[0;32mI (116138) mqtt_sub: ts_ms: 208931[0m
+[0;32mI (116138) mqtt_sub: pump: false[0m
+[0;32mI (116138) mqtt_sub: flooded: false[0m
+[0;32mI (116138) mqtt_sub: water_cm: 0.56[0m
+[0;32mI (116148) mqtt_sub: rx_timestamp_ms: 115640[0m
+[0;32mI (117158) mqtt_sub: MQTT message received[0m
+[0;32mI (117158) mqtt_sub: topic: node2/status[0m
+[0;32mI (117158) mqtt_sub: ts_ms: 209931[0m
+[0;32mI (117158) mqtt_sub: pump: false[0m
+[0;32mI (117168) mqtt_sub: flooded: false[0m
+[0;32mI (117168) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (117168) mqtt_sub: rx_timestamp_ms: 116667[0m
+[0;32mI (118178) mqtt_sub: MQTT message received[0m
+[0;32mI (118178) mqtt_sub: topic: node2/status[0m
+[0;32mI (118178) mqtt_sub: ts_ms: 210931[0m
+[0;32mI (118178) mqtt_sub: pump: false[0m
+[0;32mI (118178) mqtt_sub: flooded: false[0m
+[0;32mI (118188) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (118188) mqtt_sub: rx_timestamp_ms: 117684[0m
+[0;32mI (119088) mqtt_sub: MQTT message received[0m
+[0;32mI (119098) mqtt_sub: topic: node2/status[0m
+[0;32mI (119098) mqtt_sub: ts_ms: 211931[0m
+[0;32mI (119098) mqtt_sub: pump: false[0m
+[0;32mI (119098) mqtt_sub: flooded: false[0m
+[0;32mI (119098) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (119098) mqtt_sub: rx_timestamp_ms: 118599[0m
+[0;32mI (120128) mqtt_sub: MQTT message received[0m
+[0;32mI (120128) mqtt_sub: topic: node2/status[0m
+[0;32mI (120128) mqtt_sub: ts_ms: 212931[0m
+[0;32mI (120128) mqtt_sub: pump: false[0m
+[0;32mI (120128) mqtt_sub: flooded: false[0m
+[0;32mI (120138) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (120138) mqtt_sub: rx_timestamp_ms: 119635[0m
+[0;32mI (120768) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (120768) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (120768) wifi:[ADDBA]RX DELBA, reason:39, delete tid:1, initiator:1(originator)[0m
+[0;32mI (120778) wifi:<ba-del>idx:0, tid:1[0m
+[0;32mI (121188) wifi:<ba-add>idx:0 (ifx:0, ac:15:a2:df:02:c4), tid:1, ssn:162, winSize:64[0m
+[0;32mI (121188) mqtt_sub: MQTT message received[0m
+[0;32mI (121188) mqtt_sub: topic: node2/status[0m
+[0;32mI (121188) mqtt_sub: ts_ms: 213931[0m
+[0;32mI (121198) mqtt_sub: pump: false[0m
+[0;32mI (121198) mqtt_sub: flooded: false[0m
+[0;32mI (121198) mqtt_sub: water_cm: 0.52[0m
+[0;32mI (121208) mqtt_sub: rx_timestamp_ms: 120697[0m
+[0;32mI (122168) mqtt_sub: MQTT message received[0m
+[0;32mI (122168) mqtt_sub: topic: node2/status[0m
+[0;32mI (122168) mqtt_sub: ts_ms: 214931[0m
+[0;32mI (122168) mqtt_sub: pump: false[0m
+[0;32mI (122178) mqtt_sub: flooded: false[0m
+[0;32mI (122178) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (122178) mqtt_sub: rx_timestamp_ms: 121677[0m
+[0;32mI (123088) mqtt_sub: MQTT message received[0m
+[0;32mI (123088) mqtt_sub: topic: node2/status[0m
+[0;32mI (123088) mqtt_sub: ts_ms: 215931[0m
+[0;32mI (123088) mqtt_sub: pump: false[0m
+[0;32mI (123088) mqtt_sub: flooded: false[0m
+[0;32mI (123098) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (123098) mqtt_sub: rx_timestamp_ms: 122594[0m
+[0;32mI (124118) mqtt_sub: MQTT message received[0m
+[0;32mI (124118) mqtt_sub: topic: node2/status[0m
+[0;32mI (124118) mqtt_sub: ts_ms: 216931[0m
+[0;32mI (124118) mqtt_sub: pump: false[0m
+[0;32mI (124118) mqtt_sub: flooded: false[0m
+[0;32mI (124118) mqtt_sub: water_cm: 1.23[0m
+[0;32mI (124128) mqtt_sub: rx_timestamp_ms: 123622[0m
+[0;32mI (125138) mqtt_sub: MQTT message received[0m
+[0;32mI (125138) mqtt_sub: topic: node2/status[0m
+[0;32mI (125148) mqtt_sub: ts_ms: 217931[0m
+[0;32mI (125148) mqtt_sub: pump: false[0m
+[0;32mI (125148) mqtt_sub: flooded: false[0m
+[0;32mI (125148) mqtt_sub: water_cm: 1.79[0m
+[0;32mI (125148) mqtt_sub: rx_timestamp_ms: 124647[0m
+[0;32mI (126158) mqtt_sub: MQTT message received[0m
+[0;32mI (126168) mqtt_sub: topic: node2/log[0m
+[0;32mI (126168) mqtt_sub: ts_ms: 218931[0m
+[0;32mI (126168) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (126168) mqtt_sub: pump: (missing)[0m
+[0;32mI (126168) mqtt_sub: flooded: (missing)[0m
+[0;32mI (126178) mqtt_sub: water_cm: 2.46[0m
+[0;32mI (126178) mqtt_sub: rx_timestamp_ms: 125669[0m
+[0;32mI (126568) mqtt_sub: MQTT message received[0m
+[0;32mI (126568) mqtt_sub: topic: node2/status[0m
+[0;32mI (126568) mqtt_sub: ts_ms: 218938[0m
+[0;32mI (126568) mqtt_sub: pump: true[0m
+[0;32mI (126578) mqtt_sub: flooded: true[0m
+[0;32mI (126578) mqtt_sub: water_cm: 2.46[0m
+[0;32mI (126578) mqtt_sub: rx_timestamp_ms: 126077[0m
+[0;32mI (127088) mqtt_sub: MQTT message received[0m
+[0;32mI (127088) mqtt_sub: topic: node2/log[0m
+[0;32mI (127088) mqtt_sub: ts_ms: 219941[0m
+[0;32mI (127088) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (127098) mqtt_sub: pump: (missing)[0m
+[0;32mI (127098) mqtt_sub: flooded: (missing)[0m
+[0;32mI (127098) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (127108) mqtt_sub: rx_timestamp_ms: 126596[0m
+[0;32mI (127498) mqtt_sub: MQTT message received[0m
+[0;32mI (127498) mqtt_sub: topic: node2/status[0m
+[0;32mI (127498) mqtt_sub: ts_ms: 219949[0m
+[0;32mI (127498) mqtt_sub: pump: false[0m
+[0;32mI (127498) mqtt_sub: flooded: false[0m
+[0;32mI (127498) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (127508) mqtt_sub: rx_timestamp_ms: 127002[0m
+[0;32mI (128108) mqtt_sub: MQTT message received[0m
+[0;32mI (128108) mqtt_sub: topic: node2/log[0m
+[0;32mI (128108) mqtt_sub: ts_ms: 220951[0m
+[0;32mI (128108) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (128118) mqtt_sub: pump: (missing)[0m
+[0;32mI (128118) mqtt_sub: flooded: (missing)[0m
+[0;32mI (128118) mqtt_sub: water_cm: 2.56[0m
+[0;32mI (128128) mqtt_sub: rx_timestamp_ms: 127616[0m
+[0;32mI (128308) mqtt_sub: MQTT message received[0m
+[0;32mI (128308) mqtt_sub: topic: node2/status[0m
+[0;32mI (128308) mqtt_sub: ts_ms: 220957[0m
+[0;32mI (128308) mqtt_sub: pump: true[0m
+[0;32mI (128318) mqtt_sub: flooded: true[0m
+[0;32mI (128318) mqtt_sub: water_cm: 2.56[0m
+[0;32mI (128318) mqtt_sub: rx_timestamp_ms: 127817[0m
+[0;32mI (129148) mqtt_sub: MQTT message received[0m
+[0;32mI (129148) mqtt_sub: topic: node2/log[0m
+[0;32mI (129148) mqtt_sub: ts_ms: 221961[0m
+[0;32mI (129148) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (129158) mqtt_sub: pump: (missing)[0m
+[0;32mI (129158) mqtt_sub: flooded: (missing)[0m
+[0;32mI (129158) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (129168) mqtt_sub: rx_timestamp_ms: 128656[0m
+[0;32mI (129538) mqtt_sub: MQTT message received[0m
+[0;32mI (129538) mqtt_sub: topic: node2/status[0m
+[0;32mI (129538) mqtt_sub: ts_ms: 221967[0m
+[0;32mI (129538) mqtt_sub: pump: false[0m
+[0;32mI (129538) mqtt_sub: flooded: false[0m
+[0;32mI (129538) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (129548) mqtt_sub: rx_timestamp_ms: 129042[0m
+[0;32mI (130158) mqtt_sub: MQTT message received[0m
+[0;32mI (130158) mqtt_sub: topic: node2/status[0m
+[0;32mI (130158) mqtt_sub: ts_ms: 222971[0m
+[0;32mI (130158) mqtt_sub: pump: false[0m
+[0;32mI (130158) mqtt_sub: flooded: false[0m
+[0;32mI (130158) mqtt_sub: water_cm: 0.56[0m
+[0;32mI (130168) mqtt_sub: rx_timestamp_ms: 129660[0m
+[0;32mI (131178) mqtt_sub: MQTT message received[0m
+[0;32mI (131178) mqtt_sub: topic: node2/status[0m
+[0;32mI (131178) mqtt_sub: ts_ms: 223971[0m
+[0;32mI (131178) mqtt_sub: pump: false[0m
+[0;32mI (131178) mqtt_sub: flooded: false[0m
+[0;32mI (131178) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (131188) mqtt_sub: rx_timestamp_ms: 130682[0m
+[0;32mI (132198) mqtt_sub: MQTT message received[0m
+[0;32mI (132198) mqtt_sub: topic: node2/status[0m
+[0;32mI (132198) mqtt_sub: ts_ms: 224971[0m
+[0;32mI (132198) mqtt_sub: pump: false[0m
+[0;32mI (132198) mqtt_sub: flooded: false[0m
+[0;32mI (132208) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (132208) mqtt_sub: rx_timestamp_ms: 131706[0m
+[0;32mI (133128) mqtt_sub: MQTT message received[0m
+[0;32mI (133138) mqtt_sub: topic: node2/status[0m
+[0;32mI (133138) mqtt_sub: ts_ms: 225971[0m
+[0;32mI (133138) mqtt_sub: pump: false[0m
+[0;32mI (133138) mqtt_sub: flooded: false[0m
+[0;32mI (133138) mqtt_sub: water_cm: 0.51[0m
+[0;32mI (133138) mqtt_sub: rx_timestamp_ms: 132639[0m
+[0;32mI (134148) mqtt_sub: MQTT message received[0m
+[0;32mI (134148) mqtt_sub: topic: node2/status[0m
+[0;32mI (134148) mqtt_sub: ts_ms: 226971[0m
+[0;32mI (134148) mqtt_sub: pump: false[0m
+[0;32mI (134148) mqtt_sub: flooded: false[0m
+[0;32mI (134158) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (134158) mqtt_sub: rx_timestamp_ms: 133655[0m
+[0;32mI (135168) mqtt_sub: MQTT message received[0m
+[0;32mI (135178) mqtt_sub: topic: node2/status[0m
+[0;32mI (135178) mqtt_sub: ts_ms: 227971[0m
+[0;32mI (135178) mqtt_sub: pump: false[0m
+[0;32mI (135178) mqtt_sub: flooded: false[0m
+[0;32mI (135178) mqtt_sub: water_cm: 1.03[0m
+[0;32mI (135178) mqtt_sub: rx_timestamp_ms: 134679[0m
+[0;32mI (136198) mqtt_sub: MQTT message received[0m
+[0;32mI (136198) mqtt_sub: topic: node2/status[0m
+[0;32mI (136198) mqtt_sub: ts_ms: 228971[0m
+[0;32mI (136198) mqtt_sub: pump: false[0m
+[0;32mI (136198) mqtt_sub: flooded: false[0m
+[0;32mI (136198) mqtt_sub: water_cm: 1.79[0m
+[0;32mI (136208) mqtt_sub: rx_timestamp_ms: 135702[0m
+[0;32mI (137128) mqtt_sub: MQTT message received[0m
+[0;32mI (137128) mqtt_sub: topic: node2/log[0m
+[0;32mI (137128) mqtt_sub: ts_ms: 229971[0m
+[0;32mI (137128) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (137128) mqtt_sub: pump: (missing)[0m
+[0;32mI (137128) mqtt_sub: flooded: (missing)[0m
+[0;32mI (137138) mqtt_sub: water_cm: 2.63[0m
+[0;32mI (137138) mqtt_sub: rx_timestamp_ms: 136632[0m
+[0;32mI (137318) mqtt_sub: MQTT message received[0m
+[0;32mI (137318) mqtt_sub: topic: node2/status[0m
+[0;32mI (137318) mqtt_sub: ts_ms: 229977[0m
+[0;32mI (137318) mqtt_sub: pump: true[0m
+[0;32mI (137318) mqtt_sub: flooded: true[0m
+[0;32mI (137318) mqtt_sub: water_cm: 2.63[0m
+[0;32mI (137328) mqtt_sub: rx_timestamp_ms: 136823[0m
+[0;32mI (138138) mqtt_sub: MQTT message received[0m
+[0;32mI (138138) mqtt_sub: topic: node2/log[0m
+[0;32mI (138148) mqtt_sub: ts_ms: 230981[0m
+[0;32mI (138148) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (138148) mqtt_sub: pump: (missing)[0m
+[0;32mI (138148) mqtt_sub: flooded: (missing)[0m
+[0;32mI (138148) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (138158) mqtt_sub: rx_timestamp_ms: 137648[0m
+[0;32mI (138448) mqtt_sub: MQTT message received[0m
+[0;32mI (138448) mqtt_sub: topic: node2/status[0m
+[0;32mI (138448) mqtt_sub: ts_ms: 230988[0m
+[0;32mI (138448) mqtt_sub: pump: false[0m
+[0;32mI (138448) mqtt_sub: flooded: false[0m
+[0;32mI (138458) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (138458) mqtt_sub: rx_timestamp_ms: 137956[0m
+[0;32mI (139168) mqtt_sub: MQTT message received[0m
+[0;32mI (139168) mqtt_sub: topic: node2/status[0m
+[0;32mI (139168) mqtt_sub: ts_ms: 231991[0m
+[0;32mI (139168) mqtt_sub: pump: false[0m
+[0;32mI (139168) mqtt_sub: flooded: false[0m
+[0;32mI (139168) mqtt_sub: water_cm: 0.85[0m
+[0;32mI (139178) mqtt_sub: rx_timestamp_ms: 138673[0m
+[0;32mI (140188) mqtt_sub: MQTT message received[0m
+[0;32mI (140188) mqtt_sub: topic: node2/status[0m
+[0;32mI (140188) mqtt_sub: ts_ms: 232991[0m
+[0;32mI (140188) mqtt_sub: pump: false[0m
+[0;32mI (140188) mqtt_sub: flooded: false[0m
+[0;32mI (140198) mqtt_sub: water_cm: 0.67[0m
+[0;32mI (140198) mqtt_sub: rx_timestamp_ms: 139695[0m
+[0;32mI (141218) mqtt_sub: MQTT message received[0m
+[0;32mI (141218) mqtt_sub: topic: node2/status[0m
+[0;32mI (141218) mqtt_sub: ts_ms: 233991[0m
+[0;32mI (141218) mqtt_sub: pump: false[0m
+[0;32mI (141218) mqtt_sub: flooded: false[0m
+[0;32mI (141228) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (141228) mqtt_sub: rx_timestamp_ms: 140725[0m
+[0;32mI (142128) mqtt_sub: MQTT message received[0m
+[0;32mI (142138) mqtt_sub: topic: node2/status[0m
+[0;32mI (142138) mqtt_sub: ts_ms: 234992[0m
+[0;32mI (142138) mqtt_sub: pump: false[0m
+[0;32mI (142138) mqtt_sub: flooded: false[0m
+[0;32mI (142138) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (142138) mqtt_sub: rx_timestamp_ms: 141639[0m
+[0;32mI (143178) mqtt_sub: MQTT message received[0m
+[0;32mI (143178) mqtt_sub: topic: node2/status[0m
+[0;32mI (143178) mqtt_sub: ts_ms: 235991[0m
+[0;32mI (143178) mqtt_sub: pump: false[0m
+[0;32mI (143178) mqtt_sub: flooded: false[0m
+[0;32mI (143188) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (143188) mqtt_sub: rx_timestamp_ms: 142685[0m
+[0;32mI (144188) mqtt_sub: MQTT message received[0m
+[0;32mI (144188) mqtt_sub: topic: node2/status[0m
+[0;32mI (144198) mqtt_sub: ts_ms: 236991[0m
+[0;32mI (144198) mqtt_sub: pump: false[0m
+[0;32mI (144198) mqtt_sub: flooded: false[0m
+[0;32mI (144198) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (144198) mqtt_sub: rx_timestamp_ms: 143698[0m
+[0;32mI (145248) mqtt_sub: MQTT message received[0m
+[0;32mI (145248) mqtt_sub: topic: node2/status[0m
+[0;32mI (145248) mqtt_sub: ts_ms: 237991[0m
+[0;32mI (145248) mqtt_sub: pump: false[0m
+[0;32mI (145248) mqtt_sub: flooded: false[0m
+[0;32mI (145258) mqtt_sub: water_cm: 0.77[0m
+[0;32mI (145258) mqtt_sub: rx_timestamp_ms: 144754[0m
+[0;32mI (146128) mqtt_sub: MQTT message received[0m
+[0;32mI (146128) mqtt_sub: topic: node2/status[0m
+[0;32mI (146128) mqtt_sub: ts_ms: 238991[0m
+[0;32mI (146128) mqtt_sub: pump: false[0m
+[0;32mI (146128) mqtt_sub: flooded: false[0m
+[0;32mI (146128) mqtt_sub: water_cm: 1.33[0m
+[0;32mI (146138) mqtt_sub: rx_timestamp_ms: 145632[0m
+[0;32mI (147158) mqtt_sub: MQTT message received[0m
+[0;32mI (147158) mqtt_sub: topic: node2/log[0m
+[0;32mI (147158) mqtt_sub: ts_ms: 239991[0m
+[0;32mI (147158) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (147158) mqtt_sub: pump: (missing)[0m
+[0;32mI (147168) mqtt_sub: flooded: (missing)[0m
+[0;32mI (147168) mqtt_sub: water_cm: 2.23[0m
+[0;32mI (147168) mqtt_sub: rx_timestamp_ms: 146663[0m
+[0;32mI (147498) mqtt_sub: MQTT message received[0m
+[0;32mI (147508) mqtt_sub: topic: node2/status[0m
+[0;32mI (147508) mqtt_sub: ts_ms: 239997[0m
+[0;32mI (147508) mqtt_sub: pump: true[0m
+[0;32mI (147508) mqtt_sub: flooded: true[0m
+[0;32mI (147508) mqtt_sub: water_cm: 2.23[0m
+[0;32mI (147508) mqtt_sub: rx_timestamp_ms: 147009[0m
+[0;32mI (148188) mqtt_sub: MQTT message received[0m
+[0;32mI (148188) mqtt_sub: topic: node2/log[0m
+[0;32mI (148188) mqtt_sub: ts_ms: 241001[0m
+[0;32mI (148188) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (148188) mqtt_sub: pump: (missing)[0m
+[0;32mI (148198) mqtt_sub: flooded: (missing)[0m
+[0;32mI (148198) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (148198) mqtt_sub: rx_timestamp_ms: 147695[0m
+[0;32mI (148518) mqtt_sub: MQTT message received[0m
+[0;32mI (148518) mqtt_sub: topic: node2/status[0m
+[0;32mI (148518) mqtt_sub: ts_ms: 241007[0m
+[0;32mI (148518) mqtt_sub: pump: false[0m
+[0;32mI (148518) mqtt_sub: flooded: false[0m
+[0;32mI (148528) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (148528) mqtt_sub: rx_timestamp_ms: 148024[0m
+[0;32mI (149198) mqtt_sub: MQTT message received[0m
+[0;32mI (149198) mqtt_sub: topic: node2/log[0m
+[0;32mI (149198) mqtt_sub: ts_ms: 242011[0m
+[0;32mI (149198) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (149208) mqtt_sub: pump: (missing)[0m
+[0;32mI (149208) mqtt_sub: flooded: (missing)[0m
+[0;32mI (149208) mqtt_sub: water_cm: 2.35[0m
+[0;32mI (149218) mqtt_sub: rx_timestamp_ms: 148707[0m
+[0;32mI (149508) mqtt_sub: MQTT message received[0m
+[0;32mI (149508) mqtt_sub: topic: node2/status[0m
+[0;32mI (149508) mqtt_sub: ts_ms: 242017[0m
+[0;32mI (149508) mqtt_sub: pump: true[0m
+[0;32mI (149518) mqtt_sub: flooded: true[0m
+[0;32mI (149518) mqtt_sub: water_cm: 2.35[0m
+[0;32mI (149518) mqtt_sub: rx_timestamp_ms: 149016[0m
+[0;32mI (150228) mqtt_sub: MQTT message received[0m
+[0;32mI (150228) mqtt_sub: topic: node2/log[0m
+[0;32mI (150228) mqtt_sub: ts_ms: 243021[0m
+[0;32mI (150228) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (150228) mqtt_sub: pump: (missing)[0m
+[0;32mI (150228) mqtt_sub: flooded: (missing)[0m
+[0;32mI (150238) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (150238) mqtt_sub: rx_timestamp_ms: 149731[0m
+[0;32mI (150628) mqtt_sub: MQTT message received[0m
+[0;32mI (150628) mqtt_sub: topic: node2/status[0m
+[0;32mI (150628) mqtt_sub: ts_ms: 243028[0m
+[0;32mI (150628) mqtt_sub: pump: false[0m
+[0;32mI (150628) mqtt_sub: flooded: false[0m
+[0;32mI (150638) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (150638) mqtt_sub: rx_timestamp_ms: 150136[0m
+[0;32mI (151248) mqtt_sub: MQTT message received[0m
+[0;32mI (151258) mqtt_sub: topic: node2/status[0m
+[0;32mI (151258) mqtt_sub: ts_ms: 244031[0m
+[0;32mI (151258) mqtt_sub: pump: false[0m
+[0;32mI (151258) mqtt_sub: flooded: false[0m
+[0;32mI (151258) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (151258) mqtt_sub: rx_timestamp_ms: 150759[0m
+[0;32mI (152178) mqtt_sub: MQTT message received[0m
+[0;32mI (152178) mqtt_sub: topic: node2/status[0m
+[0;32mI (152178) mqtt_sub: ts_ms: 245032[0m
+[0;32mI (152178) mqtt_sub: pump: false[0m
+[0;32mI (152178) mqtt_sub: flooded: false[0m
+[0;32mI (152178) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (152188) mqtt_sub: rx_timestamp_ms: 151681[0m
+[0;32mI (153208) mqtt_sub: MQTT message received[0m
+[0;32mI (153208) mqtt_sub: topic: node2/status[0m
+[0;32mI (153208) mqtt_sub: ts_ms: 246031[0m
+[0;32mI (153208) mqtt_sub: pump: false[0m
+[0;32mI (153208) mqtt_sub: flooded: false[0m
+[0;32mI (153208) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (153218) mqtt_sub: rx_timestamp_ms: 152711[0m
+[0;32mI (154218) mqtt_sub: MQTT message received[0m
+[0;32mI (154218) mqtt_sub: topic: node2/status[0m
+[0;32mI (154218) mqtt_sub: ts_ms: 247031[0m
+[0;32mI (154228) mqtt_sub: pump: false[0m
+[0;32mI (154228) mqtt_sub: flooded: false[0m
+[0;32mI (154228) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (154228) mqtt_sub: rx_timestamp_ms: 153728[0m
+[0;32mI (155248) mqtt_sub: MQTT message received[0m
+[0;32mI (155248) mqtt_sub: topic: node2/status[0m
+[0;32mI (155248) mqtt_sub: ts_ms: 248031[0m
+[0;32mI (155248) mqtt_sub: pump: false[0m
+[0;32mI (155248) mqtt_sub: flooded: false[0m
+[0;32mI (155248) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (155258) mqtt_sub: rx_timestamp_ms: 154753[0m
+[0;32mI (156268) mqtt_sub: MQTT message received[0m
+[0;32mI (156268) mqtt_sub: topic: node2/status[0m
+[0;32mI (156268) mqtt_sub: ts_ms: 249031[0m
+[0;32mI (156268) mqtt_sub: pump: false[0m
+[0;32mI (156268) mqtt_sub: flooded: false[0m
+[0;32mI (156268) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (156278) mqtt_sub: rx_timestamp_ms: 155773[0m
+[0;32mI (157188) mqtt_sub: MQTT message received[0m
+[0;32mI (157188) mqtt_sub: topic: node2/status[0m
+[0;32mI (157188) mqtt_sub: ts_ms: 250031[0m
+[0;32mI (157188) mqtt_sub: pump: false[0m
+[0;32mI (157188) mqtt_sub: flooded: false[0m
+[0;32mI (157188) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (157198) mqtt_sub: rx_timestamp_ms: 156691[0m
+[0;32mI (158208) mqtt_sub: MQTT message received[0m
+[0;32mI (158208) mqtt_sub: topic: node2/status[0m
+[0;32mI (158208) mqtt_sub: ts_ms: 251031[0m
+[0;32mI (158208) mqtt_sub: pump: false[0m
+[0;32mI (158218) mqtt_sub: flooded: false[0m
+[0;32mI (158218) mqtt_sub: water_cm: 1.07[0m
+[0;32mI (158218) mqtt_sub: rx_timestamp_ms: 157717[0m
+[0;32mI (159238) mqtt_sub: MQTT message received[0m
+[0;32mI (159238) mqtt_sub: topic: node2/status[0m
+[0;32mI (159238) mqtt_sub: ts_ms: 252031[0m
+[0;32mI (159248) mqtt_sub: pump: false[0m
+[0;32mI (159248) mqtt_sub: flooded: false[0m
+[0;32mI (159248) mqtt_sub: water_cm: 1.51[0m
+[0;32mI (159248) mqtt_sub: rx_timestamp_ms: 158748[0m
+[0;32mI (160258) mqtt_sub: MQTT message received[0m
+[0;32mI (160258) mqtt_sub: topic: node2/status[0m
+[0;32mI (160268) mqtt_sub: ts_ms: 253031[0m
+[0;32mI (160268) mqtt_sub: pump: false[0m
+[0;32mI (160268) mqtt_sub: flooded: false[0m
+[0;32mI (160268) mqtt_sub: water_cm: 1.98[0m
+[0;32mI (160268) mqtt_sub: rx_timestamp_ms: 159768[0m
+[0;32mI (161218) mqtt_sub: MQTT message received[0m
+[0;32mI (161218) mqtt_sub: topic: node2/log[0m
+[0;32mI (161218) mqtt_sub: ts_ms: 254031[0m
+[0;32mI (161218) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (161218) mqtt_sub: pump: (missing)[0m
+[0;32mI (161218) mqtt_sub: flooded: (missing)[0m
+[0;32mI (161228) mqtt_sub: water_cm: 2.42[0m
+[0;32mI (161228) mqtt_sub: rx_timestamp_ms: 160719[0m
+[0;32mI (161488) mqtt_sub: MQTT message received[0m
+[0;32mI (161498) mqtt_sub: topic: node2/status[0m
+[0;32mI (161498) mqtt_sub: ts_ms: 254038[0m
+[0;32mI (161498) mqtt_sub: pump: true[0m
+[0;32mI (161498) mqtt_sub: flooded: true[0m
+[0;32mI (161498) mqtt_sub: water_cm: 2.42[0m
+[0;32mI (161498) mqtt_sub: rx_timestamp_ms: 160999[0m
+[0;32mI (162208) mqtt_sub: MQTT message received[0m
+[0;32mI (162208) mqtt_sub: topic: node2/log[0m
+[0;32mI (162208) mqtt_sub: ts_ms: 255041[0m
+[0;32mI (162208) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (162208) mqtt_sub: pump: (missing)[0m
+[0;32mI (162218) mqtt_sub: flooded: (missing)[0m
+[0;32mI (162218) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (162218) mqtt_sub: rx_timestamp_ms: 161714[0m
+[0;32mI (162508) mqtt_sub: MQTT message received[0m
+[0;32mI (162508) mqtt_sub: topic: node2/status[0m
+[0;32mI (162518) mqtt_sub: ts_ms: 255047[0m
+[0;32mI (162518) mqtt_sub: pump: false[0m
+[0;32mI (162518) mqtt_sub: flooded: false[0m
+[0;32mI (162518) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (162518) mqtt_sub: rx_timestamp_ms: 162018[0m
+[0;32mI (163228) mqtt_sub: MQTT message received[0m
+[0;32mI (163228) mqtt_sub: topic: node2/log[0m
+[0;32mI (163238) mqtt_sub: ts_ms: 256051[0m
+[0;32mI (163238) mqtt_sub: event: threshold_exceeded[0m
+[0;32mI (163238) mqtt_sub: pump: (missing)[0m
+[0;32mI (163238) mqtt_sub: flooded: (missing)[0m
+[0;32mI (163238) mqtt_sub: water_cm: 3.04[0m
+[0;32mI (163248) mqtt_sub: rx_timestamp_ms: 162738[0m
+[0;32mI (163428) mqtt_sub: MQTT message received[0m
+[0;32mI (163428) mqtt_sub: topic: node2/status[0m
+[0;32mI (163428) mqtt_sub: ts_ms: 256058[0m
+[0;32mI (163428) mqtt_sub: pump: true[0m
+[0;32mI (163438) mqtt_sub: flooded: true[0m
+[0;32mI (163438) mqtt_sub: water_cm: 3.04[0m
+[0;32mI (163438) mqtt_sub: rx_timestamp_ms: 162937[0m
+[0;32mI (164248) mqtt_sub: MQTT message received[0m
+[0;32mI (164248) mqtt_sub: topic: node2/log[0m
+[0;32mI (164258) mqtt_sub: ts_ms: 257061[0m
+[0;32mI (164258) mqtt_sub: event: threshold_cleared[0m
+[0;32mI (164258) mqtt_sub: pump: (missing)[0m
+[0;32mI (164258) mqtt_sub: flooded: (missing)[0m
+[0;32mI (164258) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (164268) mqtt_sub: rx_timestamp_ms: 163758[0m
+[0;32mI (164568) mqtt_sub: MQTT message received[0m
+[0;32mI (164568) mqtt_sub: topic: node2/status[0m
+[0;32mI (164568) mqtt_sub: ts_ms: 257067[0m
+[0;32mI (164568) mqtt_sub: pump: false[0m
+[0;32mI (164568) mqtt_sub: flooded: false[0m
+[0;32mI (164568) mqtt_sub: water_cm: 0.50[0m
+[0;32mI (164578) mqtt_sub: rx_timestamp_ms: 164070[0m
+[0;32mI (165278) mqtt_sub: MQTT message received[0m
+[0;32mI (165278) mqtt_sub: topic: node2/status[0m
+[0;32mI (165278) mqtt_sub: ts_ms: 258071[0m
+[0;32mI (165278) mqtt_sub: pump: false[0m
+[0;32mI (165288) mqtt_sub: flooded: false[0m
+[0;32mI (165288) mqtt_sub: water_cm: 1.25[0m
+[0;32mI (165288) mqtt_sub: rx_timestamp_ms: 164787[0m
+[0;32mI (166308) mqtt_sub: MQTT message received[0m
+[0;32mI (166308) mqtt_sub: topic: node2/status[0m
+[0;32mI (166308) mqtt_sub: ts_ms: 259071[0m
+[0;32mI (166308) mqtt_sub: pump: false[0m
+[0;32mI (166308) mqtt_sub: flooded: false[0m
+[0;32mI (166318) mqtt_sub: water_cm: 0.72[0m
+[0;32mI (166318) mqtt_sub: rx_timestamp_ms: 165815[0m
+[0;32mI (167228) mqtt_sub: MQTT message received[0m
+[0;32mI (167228) mqtt_sub: topic: node2/status[0m
+[0;32mI (167228) mqtt_sub: ts_ms: 260071[0m
+[0;32mI (167228) mqtt_sub: pump: false[0m
+[0;32mI (167228) mqtt_sub: flooded: false[0m
+[0;32mI (167228) mqtt_sub: water_cm: 0.71[0m
+[0;32mI (167238) mqtt_sub: rx_timestamp_ms: 166730[0m
+[0;32mI (168248) mqtt_sub: MQTT message received[0m
+[0;32mI (168248) mqtt_sub: topic: node2/status[0m
+[0;32mI (168248) mqtt_sub: ts_ms: 261071[0m
+[0;32mI (168248) mqtt_sub: pump: false[0m
+[0;32mI (168258) mqtt_sub: flooded: false[0m
+[0;32mI (168258) mqtt_sub: water_cm: 0.58[0m
+[0;32mI (168258) mqtt_sub: rx_timestamp_ms: 167757[0m
+[0;32mI (169268) wifi:[ADDBA]RX DELBA, reason:39, delete tid:1, initiator:1(originator)[0m
+[0;32mI (169268) wifi:<ba-del>idx:0, tid:1[0m
+[0;32mI (169278) mqtt_sub: MQTT message received[0m
+[0;32mI (169278) mqtt_sub: topic: node2/status[0m
+[0;32mI (169278) mqtt_sub: ts_ms: 262071[0m
+[0;32mI (169278) mqtt_sub: pump: false[0m
+[0;32mI (169278) mqtt_sub: flooded: false[0m
+[0;32mI (169288) mqtt_sub: water_cm: 0.53[0m
+[0;32mI (169288) mqtt_sub: rx_timestamp_ms: 168781[0m
+[0;32mI (170298) wifi:<ba-add>idx:0 (ifx:0, ac:15:a2:df:02:c4), tid:1, ssn:225, winSize:64[0m
+[0;32mI (170298) mqtt_sub: MQTT message received[0m
+[0;32mI (170298) mqtt_sub: topic: node2/status[0m
+[0;32mI (170298) mqtt_sub: ts_ms: 263071[0m
+[0;32mI (170298) mqtt_sub: pump: false[0m
+[0;32mI (170308) mqtt_sub: flooded: false[0m
+[0;32mI (170308) mqtt_sub: water_cm: 0.53[0m
+[0;32mI (170308) mqtt_sub: rx_timestamp_ms: 169803[0m

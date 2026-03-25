@@ -36,12 +36,16 @@ static bool s_time_synced = false;
 typedef struct {
     char event[LOG_EVENT_MAX_LEN];
     float water_level_cm;
+    bool pump_on;
+    bool valve_on;
+    bool flooded;
     int64_t ts_ms;
     time_t ts_epoch;
 } log_item_t;
 
 static bool s_pending_status = false;
 static bool s_last_pump_on = false;
+static bool s_last_valve_on = false;
 static bool s_last_flooded = false;
 static float s_last_water_level = 0.0f;
 
@@ -142,7 +146,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         s_connected = true;
         ESP_LOGI(TAG, "MQTT connected");
         if (s_pending_status) {
-            mqtt_publish_status(s_last_pump_on, s_last_flooded, s_last_water_level);
+            mqtt_publish_status(s_last_pump_on, s_last_valve_on, s_last_flooded, s_last_water_level);
         }
         break;
     case MQTT_EVENT_DISCONNECTED:
@@ -189,13 +193,15 @@ static void mqtt_task(void *pvParameters)
             log_item_t item;
             while (xQueueReceive(s_log_queue, &item, 0) == pdTRUE) {
                 char payload[160];
-                char ts_iso[24] = {0};
-                bool ts_ok = s_time_synced && format_time_iso8601(ts_iso, sizeof(ts_iso), item.ts_epoch);
                 int len = snprintf(payload, sizeof(payload),
-                                   "{\"ts_ms\":%lld,\"ts_iso\":\"%s\",\"ts_valid\":%s,"
-                                   "\"event\":\"%s\",\"water_cm\":%.2f}",
-                                   (long long)item.ts_ms, ts_ok ? ts_iso : "",
-                                   ts_ok ? "true" : "false", item.event, item.water_level_cm);
+                                   "{\"ts_ms\":%lld,\"event\":\"%s\","
+                                   "\"pump\":%s,\"valve\":%s,\"flooded\":%s,"
+                                   "\"water_cm\":%.2f}",
+                                   (long long)item.ts_ms, item.event,
+                                   item.pump_on ? "true" : "false",
+                                   item.valve_on ? "true" : "false",
+                                   item.flooded ? "true" : "false",
+                                   item.water_level_cm);
                 if (len > 0) {
                     if (s_mqtt_lock && xSemaphoreTake(s_mqtt_lock, pdMS_TO_TICKS(100)) == pdTRUE) {
                         esp_mqtt_client_publish(s_client, MQTT_LOG_TOPIC, payload, 0, 1, 0);
@@ -229,9 +235,10 @@ void mqtt_task_start(const char *broker_uri)
     xTaskCreate(mqtt_task, "mqtt_task", 4096, (void *)uri, 6, &s_mqtt_task_handle);
 }
 
-void mqtt_publish_status(bool pump_on, bool flooded, float water_level_cm)
+void mqtt_publish_status(bool pump_on, bool valve_on, bool flooded, float water_level_cm)
 {
     s_last_pump_on = pump_on;
+    s_last_valve_on = valve_on;
     s_last_flooded = flooded;
     s_last_water_level = water_level_cm;
     s_pending_status = true;
@@ -242,16 +249,12 @@ void mqtt_publish_status(bool pump_on, bool flooded, float water_level_cm)
 
     char payload[128];
     int64_t ts_ms = esp_timer_get_time() / 1000;
-    time_t now = time(NULL);
-    char ts_iso[24] = {0};
-    bool ts_ok = s_time_synced && format_time_iso8601(ts_iso, sizeof(ts_iso), now);
     int len = snprintf(payload, sizeof(payload),
-                       "{\"ts_ms\":%lld,\"ts_iso\":\"%s\",\"ts_valid\":%s,"
-                       "\"pump\":%s,\"flooded\":%s,\"water_cm\":%.2f}",
+                       "{\"ts_ms\":%lld,\"pump\":%s,\"valve\":%s,"
+                       "\"flooded\":%s,\"water_cm\":%.2f}",
                        (long long)ts_ms,
-                       ts_ok ? ts_iso : "",
-                       ts_ok ? "true" : "false",
                        pump_on ? "true" : "false",
+                       valve_on ? "true" : "false",
                        flooded ? "true" : "false",
                        water_level_cm);
 
@@ -265,7 +268,7 @@ void mqtt_publish_status(bool pump_on, bool flooded, float water_level_cm)
     }
 }
 
-void mqtt_publish_log(const char *event, float water_level_cm)
+void mqtt_publish_log(const char *event, bool pump_on, bool valve_on, bool flooded, float water_level_cm)
 {
     if (!event) {
         return;
@@ -275,18 +278,23 @@ void mqtt_publish_log(const char *event, float water_level_cm)
     item.ts_ms = esp_timer_get_time() / 1000;
     item.ts_epoch = time(NULL);
     item.water_level_cm = water_level_cm;
+    item.pump_on = pump_on;
+    item.valve_on = valve_on;
+    item.flooded = flooded;
     memset(item.event, 0, sizeof(item.event));
     strncpy(item.event, event, sizeof(item.event) - 1);
 
     if (s_client && s_connected) {
         char payload[160];
-        char ts_iso[24] = {0};
-        bool ts_ok = s_time_synced && format_time_iso8601(ts_iso, sizeof(ts_iso), item.ts_epoch);
         int len = snprintf(payload, sizeof(payload),
-                           "{\"ts_ms\":%lld,\"ts_iso\":\"%s\",\"ts_valid\":%s,"
-                           "\"event\":\"%s\",\"water_cm\":%.2f}",
-                           (long long)item.ts_ms, ts_ok ? ts_iso : "",
-                           ts_ok ? "true" : "false", item.event, item.water_level_cm);
+                           "{\"ts_ms\":%lld,\"event\":\"%s\","
+                           "\"pump\":%s,\"valve\":%s,\"flooded\":%s,"
+                           "\"water_cm\":%.2f}",
+                           (long long)item.ts_ms, item.event,
+                           item.pump_on ? "true" : "false",
+                           item.valve_on ? "true" : "false",
+                           item.flooded ? "true" : "false",
+                           item.water_level_cm);
         if (len > 0) {
             if (s_mqtt_lock && xSemaphoreTake(s_mqtt_lock, pdMS_TO_TICKS(100)) == pdTRUE) {
                 esp_mqtt_client_publish(s_client, MQTT_LOG_TOPIC, payload, 0, 1, 0);

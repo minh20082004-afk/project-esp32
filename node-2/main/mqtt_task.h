@@ -20,10 +20,10 @@
 // Start MQTT client and non-blocking Wi-Fi initialization.
 void mqtt_task_start(const char *broker_uri);
 
-// Publish current status (pump, flooded, water level).
-void mqtt_publish_status(bool pump_on, bool flooded, float water_level_cm);
+// Publish current status (pump, valve, flooded, water level).
+void mqtt_publish_status(bool pump_on, bool valve_on, bool flooded, float water_level_cm);
 
 // Publish a log event when threshold is exceeded.
-void mqtt_publish_log(const char *event, float water_level_cm);
+void mqtt_publish_log(const char *event, bool pump_on, bool valve_on, bool flooded, float water_level_cm);
 
 #endif

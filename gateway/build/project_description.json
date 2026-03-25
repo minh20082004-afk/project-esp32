@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "gateway",
-    "project_version":    "d72cdf0-dirty",
+    "project_version":    "f640484-dirty",
     "project_path":       "D:/project-esp32/gateway",
     "idf_path":           "D:/espidf/Espressif/frameworks/esp-idf-v5.5.3",
     "build_dir":          "D:/project-esp32/gateway/build",

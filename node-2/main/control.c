@@ -29,6 +29,7 @@ void init_control() {
 void control_task(void *pvParameters) {
     float water_level;
     bool pump_on = false;
+    bool valve_on = false;
     bool was_over_threshold = false;
 
     while (1) {
@@ -38,23 +39,28 @@ void control_task(void *pvParameters) {
                 gpio_set_level(PUMP_GPIO, 1);
                 gpio_set_level(VALVE_GPIO, 1);
                 pump_on = true;
+                valve_on = true;
             }
             if (water_level <= WATER_LEVEL_THRESHOLD - 0.5) {
                 gpio_set_level(PUMP_GPIO, 0);
                 gpio_set_level(VALVE_GPIO, 0);
                 pump_on = false;
+                valve_on = false;
             }
 
             if (!was_over_threshold && water_level > WATER_LEVEL_THRESHOLD) {
-                mqtt_publish_log("threshold_exceeded", water_level);
+                mqtt_publish_log("threshold_exceeded", pump_on, valve_on,
+                                 water_level > WATER_LEVEL_THRESHOLD, water_level);
                 was_over_threshold = true;
             }
             if (was_over_threshold && water_level <= WATER_LEVEL_THRESHOLD - 0.5) {
-                mqtt_publish_log("threshold_cleared", water_level);
+                mqtt_publish_log("threshold_cleared", pump_on, valve_on,
+                                 water_level > WATER_LEVEL_THRESHOLD, water_level);
                 was_over_threshold = false;
             }
 
-            mqtt_publish_status(pump_on, water_level > WATER_LEVEL_THRESHOLD, water_level);
+            mqtt_publish_status(pump_on, valve_on,
+                                water_level > WATER_LEVEL_THRESHOLD, water_level);
         }
     }
 }

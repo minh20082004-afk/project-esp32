@@ -64,10 +64,9 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         }
 
         cJSON *ts_ms = cJSON_GetObjectItemCaseSensitive(root, "ts_ms");
-        cJSON *ts_iso = cJSON_GetObjectItemCaseSensitive(root, "ts_iso");
-        cJSON *ts_valid = cJSON_GetObjectItemCaseSensitive(root, "ts_valid");
         cJSON *event_field = cJSON_GetObjectItemCaseSensitive(root, "event");
         cJSON *pump = cJSON_GetObjectItemCaseSensitive(root, "pump");
+        cJSON *valve = cJSON_GetObjectItemCaseSensitive(root, "valve");
         cJSON *flooded = cJSON_GetObjectItemCaseSensitive(root, "flooded");
         cJSON *water_cm = cJSON_GetObjectItemCaseSensitive(root, "water_cm");
 
@@ -75,18 +74,6 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
             ESP_LOGI(TAG, "ts_ms: %lld", (long long)ts_ms->valuedouble);
         } else {
             ESP_LOGI(TAG, "ts_ms: (missing)");
-        }
-
-        if (cJSON_IsString(ts_iso) && (ts_iso->valuestring != NULL)) {
-            ESP_LOGI(TAG, "ts_iso: %s", ts_iso->valuestring);
-        } else {
-            ESP_LOGI(TAG, "ts_iso: (missing)");
-        }
-
-        if (cJSON_IsBool(ts_valid)) {
-            ESP_LOGI(TAG, "ts_valid: %s", cJSON_IsTrue(ts_valid) ? "true" : "false");
-        } else {
-            ESP_LOGI(TAG, "ts_valid: (missing)");
         }
 
         if (cJSON_IsString(event_field) && (event_field->valuestring != NULL)) {
@@ -99,6 +86,14 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
             ESP_LOGI(TAG, "pump: %d", pump->valueint);
         } else {
             ESP_LOGI(TAG, "pump: (missing)");
+        }
+
+        if (cJSON_IsBool(valve)) {
+            ESP_LOGI(TAG, "valve: %s", cJSON_IsTrue(valve) ? "true" : "false");
+        } else if (cJSON_IsNumber(valve)) {
+            ESP_LOGI(TAG, "valve: %d", valve->valueint);
+        } else {
+            ESP_LOGI(TAG, "valve: (missing)");
         }
 
         if (cJSON_IsBool(flooded)) {
